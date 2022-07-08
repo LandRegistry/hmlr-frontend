@@ -1,10 +1,7 @@
-$govuk-button-colour: #0f0;
-// $govuk-button-hover-colour: govuk-shade($govuk-button-colour, 20%);
-// $govuk-button-shadow-colour: govuk-shade($govuk-button-colour, 60%);
-// $govuk-button-text-colour: govuk-colour("white");
+// @import "govuk-frontend/govuk/components/button/index";
 
 .hmlr-button {
   // @extend .govuk-button;
   border-left: 10px #f0a solid;
-  @include govuk-font($size: 48);
+  // @include govuk-font($size: 48);
 }

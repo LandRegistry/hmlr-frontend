@@ -45,3 +45,9 @@ SecondaryButton.args = {
   text: "Click me",
   classes: "govuk-button--secondary",
 };
+
+export const WarningButton = Template.bind({});
+WarningButton.args = {
+  text: "Click me",
+  classes: "govuk-button--warning",
+};
