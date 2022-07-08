@@ -23,7 +23,9 @@ module.exports = {
       use: [
         {
           loader: "simple-nunjucks-loader",
-          options: {},
+          options: {
+            searchPaths: ["node_modules/govuk-frontend"],
+          },
         },
       ],
     });

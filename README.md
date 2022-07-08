@@ -8,7 +8,7 @@ nvm use
 npm install
 
 # To develop
-npm run start
+npm start
 
 # Prettier
 npm run prettier
