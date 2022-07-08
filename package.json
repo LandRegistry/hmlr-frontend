@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "description": "HMLR frontend styles",
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o dist/storybook",
+    "start": "start-storybook -p 6006",
+    "build": "build-storybook -o dist/storybook",
     "prettier": "prettier --write '{src,.storybook}/**/*.{js,scss,mdx}'",
-    "build": "npm run lint && npm run styles",
+    "styles": "npm run lint && npm run styles",
     "lint": "prettier --check '{src,.storybook}/**/*.{js,scss,mdx}'",
-    "styles": "sass --style=compressed --load-path=node_modules src/hmlr/all.scss dist/hmlr-frontend.scss"
+    "sass": "sass --style=compressed --load-path=node_modules src/hmlr/all.scss dist/hmlr-frontend.scss"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/LandRegistry/hmlr-frontend/issues"
+  },
+  "engines": {
+    "node": "16.16.0"
   },
   "homepage": "https://github.com/LandRegistry/hmlr-frontend#readme",
   "dependencies": {
