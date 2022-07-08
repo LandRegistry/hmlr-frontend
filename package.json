@@ -6,7 +6,7 @@
     "start": "start-storybook -p 6006",
     "build": "build-storybook -o dist/storybook",
     "prettier": "prettier --write '{src,.storybook}/**/*.{js,scss,mdx}'",
-    "styles": "npm run lint && npm run styles",
+    "styles": "npm run lint && npm run sass",
     "lint": "prettier --check '{src,.storybook}/**/*.{js,scss,mdx}'",
     "sass": "sass --style=compressed --load-path=node_modules src/hmlr/all.scss dist/hmlr-frontend.scss"
   },
