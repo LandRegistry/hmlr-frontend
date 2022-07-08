@@ -1,6 +1,6 @@
 # HM Land Registry Frontend Styles
 
-> PRE-ALPHA: Not ready for production use
+> 🛑 PRE-ALPHA: Not ready for production use 🛑
 
 ```
 # Setup
