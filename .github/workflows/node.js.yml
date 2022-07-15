@@ -25,5 +25,5 @@ jobs:
       run: npm run test
     - name: Build Storybook
       run: npm run build
-    - name: Build CSS
-      run: npm run styles
+    - name: Build distribution files
+      run: npm run dist
