@@ -10,6 +10,12 @@ npm install
 # To develop
 npm start
 
+# Test
+npm test
+
+# Lint
+npm run lint
+
 # Prettier
 npm run prettier
 
@@ -17,7 +23,7 @@ npm run prettier
 npm run build
 
 # To build styles for production
-npm run styles
+npm run dist
 ```
 
 The GovUK frontend styles don't need to be included as a peer dependency alongside this as they are bundled in with the HM Land Registry styles. This way we can ensure that we are using a compatible version of their frontend.

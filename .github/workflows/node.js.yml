@@ -10,14 +10,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js 16.16.0
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Set up Node
       uses: actions/setup-node@v3
       with:
         node-version: 16.16.0
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run lint
-    - run: npm run test
-    - run: npm run build
-    - run: npm run styles
+        cache: npm
+    - name: Install
+      run: npm ci
+    - name: Lint
+      run: npm run lint
+    - name: Test
+      run: npm run test
+    - name: Build Storybook
+      run: npm run build
+    - name: Build CSS
+      run: npm run styles

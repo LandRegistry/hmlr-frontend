@@ -6,10 +6,12 @@
     "start": "start-storybook -p 6006",
     "build": "build-storybook -o dist/storybook",
     "prettier": "prettier --write '{src,.storybook,tasks}/**/*.{js,scss,mdx}'",
-    "styles": "npm run lint && npm run sass",
+    "dist": "npm run sass && npm run scripts && npm run assets",
     "test": "node tasks/test-fixtures.js",
     "lint": "prettier --check '{src,.storybook,tasks}/**/*.{js,scss,mdx}'",
-    "sass": "sass --style=compressed --load-path=node_modules src/hmlr/all.scss dist/hmlr-frontend.scss"
+    "sass": "sass --style=compressed --load-path=node_modules src/hmlr/all.scss dist/hmlr-frontend.css",
+    "scripts": "webpack",
+    "assets": "mkdir dist/assets && cp src/hmlr/assets/* dist/assets"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
     "@mdx-js/react": "^2.1.2",
     "@storybook/addon-a11y": "^6.5.9",
     "@storybook/addon-docs": "^6.5.9",
@@ -38,6 +41,7 @@
     "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "glob": "^8.0.3",
     "nunjucks": "^3.2.3",

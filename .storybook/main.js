@@ -1,4 +1,6 @@
 const path = require("path");
+const webpackConfig = require("../webpack.config");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx)"],
@@ -13,35 +15,40 @@ module.exports = {
     builder: "@storybook/builder-webpack5",
   },
   webpackFinal: async (config, { configType }) => {
-    config.resolve.alias["govuk-frontend"] = path.resolve(
-      __dirname,
-      "../node_modules/govuk-frontend"
+    config.resolve.alias = { ...webpackConfig.resolve.alias };
+
+    config.plugins.push(
+      new CopyPlugin({
+        patterns: [
+          { from: "./src/hmlr/scripts", to: "./" },
+          // {
+          //   from: "./node_modules/govuk-frontend/govuk-esm",
+          //   to: "./node_modules/govuk-frontend/govuk-esm",
+          // },
+        ],
+      })
     );
 
-    config.module.rules.push({
-      test: /\.njk$/,
-      use: [
-        {
-          loader: "simple-nunjucks-loader",
-          options: {
-            searchPaths: ["node_modules/govuk-frontend"],
+    config.module.rules = [
+      ...config.module.rules,
+      ...webpackConfig.module.rules,
+      {
+        test: /\.njk$/,
+        use: [
+          {
+            loader: "simple-nunjucks-loader",
+            options: {
+              searchPaths: ["node_modules/govuk-frontend"],
+            },
           },
-        },
-      ],
-    });
-
-    config.module.rules.push({
-      test: /\.scss$/,
-      use: [
-        // Creates `style` nodes from JS strings
-        "style-loader",
-        // Translates CSS into CommonJS
-        "css-loader",
-        // Compiles Sass to CSS
-        "sass-loader",
-      ],
-      include: path.resolve(__dirname, "../"),
-    });
+        ],
+      },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+        include: path.resolve(__dirname, "../"),
+      },
+    ];
 
     return config;
   },
