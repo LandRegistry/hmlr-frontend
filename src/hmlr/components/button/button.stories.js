@@ -6,15 +6,31 @@ export default {
   title: "Components/Button",
   argTypes: {
     text: { control: "text" },
+    html: { control: "html" },
+    value: { control: "text" },
+    name: { control: "text" },
     classes: { control: "text" },
+    attributes: { control: "text" },
     disabled: { control: "boolean" },
     href: { control: "text" },
     isStartButton: { control: "boolean" },
+    preventDoubleClick: { control: "boolean" },
   },
 };
 
-const Template = ({ text, disabled, isStartButton, href, classes }) => {
-  return Button({ params: { text, disabled, isStartButton, href, classes } });
+const Template = ({
+  text,
+  html,
+  value,
+  name,
+  disabled,
+  isStartButton,
+  href,
+  classes,
+}) => {
+  return Button({
+    params: { text, html, value, name, disabled, isStartButton, href, classes },
+  });
 };
 
 export const Standard = Template.bind({});
@@ -28,26 +44,26 @@ Disabled.args = {
   disabled: true,
 };
 
-export const StartButton = Template.bind({});
-StartButton.args = {
+export const Start = Template.bind({});
+Start.args = {
   text: "Click me",
   isStartButton: true,
 };
 
-export const AnchorButton = Template.bind({});
-AnchorButton.args = {
+export const Anchor = Template.bind({});
+Anchor.args = {
   text: "Click me",
   href: "https://hmlr-design-system-staging.herokuapp.com/",
 };
 
-export const SecondaryButton = Template.bind({});
-SecondaryButton.args = {
+export const Secondary = Template.bind({});
+Secondary.args = {
   text: "Click me",
   classes: "govuk-button--secondary",
 };
 
-export const WarningButton = Template.bind({});
-WarningButton.args = {
+export const Warning = Template.bind({});
+Warning.args = {
   text: "Click me",
   classes: "govuk-button--warning",
 };

@@ -1,11 +1,23 @@
+{%- set classNames = "govuk-button--hmlr" -%}
+
+{%- if params.classes %}
+  {% set classNames = classNames + " " + params.classes %}
+{% endif -%}
+
+
 {%- set params = {
-  classes: "govuk-button--hmlr " + params.classes,
+  classes: classNames,
   element: params.element,
   isStartButton: params.isStartButton,
   disabled: params.disabled,
   href: params.href,
   text: params.text,
-  type: params.type
+  html: params.html,
+  value: params.value,
+  name: params.name,
+  attributes: params.attributes,
+  type: params.type,
+  preventDoubleClick: params.preventDoubleClick
 } -%}
 
 {% include "govuk/components/button/template.njk" %}

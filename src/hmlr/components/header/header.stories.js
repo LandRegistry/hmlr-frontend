@@ -14,6 +14,9 @@ const Template = ({ service }) => {
 };
 
 export const Standard = Template.bind({});
-Standard.args = {
+Standard.args = {};
+
+export const ServiceName = Template.bind({});
+ServiceName.args = {
   service: "My Service",
 };

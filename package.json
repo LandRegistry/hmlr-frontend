@@ -5,9 +5,10 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "build-storybook -o dist/storybook",
-    "prettier": "prettier --write '{src,.storybook}/**/*.{js,scss,mdx}'",
+    "prettier": "prettier --write '{src,.storybook,tasks}/**/*.{js,scss,mdx}'",
     "styles": "npm run lint && npm run sass",
-    "lint": "prettier --check '{src,.storybook}/**/*.{js,scss,mdx}'",
+    "test": "node tasks/test-fixtures.js",
+    "lint": "prettier --check '{src,.storybook,tasks}/**/*.{js,scss,mdx}'",
     "sass": "sass --style=compressed --load-path=node_modules src/hmlr/all.scss dist/hmlr-frontend.scss"
   },
   "repository": {
@@ -38,6 +39,8 @@
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
+    "glob": "^8.0.3",
+    "nunjucks": "^3.2.3",
     "prettier": "^2.7.1",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
