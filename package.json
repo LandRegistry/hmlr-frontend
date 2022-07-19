@@ -1,15 +1,14 @@
 {
   "name": "@hmlr/frontend",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "HMLR frontend styles",
   "scripts": {
     "prestart": "node bin/check-nvmrc.js",
     "start": "start-storybook -p 6006",
-    "build": "node bin/check-nvmrc.js && build-storybook -o dist/storybook && npm run sass && npm run scripts && npm run assets",
+    "build": "node bin/check-nvmrc.js && build-storybook -o dist/storybook && npm run sass && npm run scripts",
     "prettier": "node bin/check-nvmrc.js && prettier --write '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'",
-    "sass": "node bin/check-nvmrc.js && sass --style=compressed --load-path=node_modules src/hmlr/all.scss dist/hmlr-frontend.css",
+    "sass": "node bin/check-nvmrc.js && sass --style=compressed --quiet-deps --load-path=. src/hmlr/all.scss dist/hmlr-frontend.css",
     "scripts": "node bin/check-nvmrc.js && webpack",
-    "assets": "node bin/check-nvmrc.js && mkdir -p dist/assets && cp src/hmlr/assets/* dist/assets",
     "test": "node tasks/test-fixtures.js",
     "lint": "prettier --check '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'",
     "prepublish": "npm run build"
@@ -27,12 +26,12 @@
     "node": "16.16.0"
   },
   "files": [
-    "dist/assets",
     "dist/*.js",
     "dist/*.js.map",
     "dist/*.css",
     "dist/*.css.map",
-    "src"
+    "src",
+    "govuk-prototype-kit-config.json"
   ],
   "homepage": "https://github.com/LandRegistry/hmlr-frontend#readme",
   "dependencies": {
