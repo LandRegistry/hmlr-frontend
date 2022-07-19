@@ -1,6 +1,6 @@
 {
   "name": "@hmlr/frontend",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "HMLR frontend styles",
   "scripts": {
     "prestart": "node bin/check-nvmrc.js",
@@ -31,7 +31,7 @@
     "dist/*.css",
     "dist/*.css.map",
     "src",
-    "govuk-prototype-kit-config.json"
+    "govuk-prototype-kit.config.json"
   ],
   "homepage": "https://github.com/LandRegistry/hmlr-frontend#readme",
   "dependencies": {
