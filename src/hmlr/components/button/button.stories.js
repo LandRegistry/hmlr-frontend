@@ -6,7 +6,7 @@ export default {
   title: "Components/Button",
   argTypes: {
     text: { control: "text" },
-    html: { control: "html" },
+    html: { control: "text" },
     value: { control: "text" },
     name: { control: "text" },
     classes: { control: "text" },

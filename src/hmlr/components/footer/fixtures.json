@@ -1,0 +1,12 @@
+{
+    "component": "footer",
+    "fixtures": [
+        {
+            "name": "default",
+            "options": {
+            },
+            "html": "<footer class=\"hmlr-footer\">\n  <p>Footer</p>\n</header>",
+            "hidden": false
+        }
+    ]
+}
