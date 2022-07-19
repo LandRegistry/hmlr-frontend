@@ -10,7 +10,7 @@
     "prettier": "node bin/check-nvmrc.js && prettier --write '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'",
     "sass": "node bin/check-nvmrc.js && sass --style=compressed --load-path=node_modules src/hmlr/all.scss dist/hmlr-frontend.css",
     "scripts": "node bin/check-nvmrc.js && webpack",
-    "assets": "node bin/check-nvmrc.js && mkdir dist/assets && cp src/hmlr/assets/* dist/assets",
+    "assets": "node bin/check-nvmrc.js && mkdir -p dist/assets && cp src/hmlr/assets/* dist/assets",
     "test": "node tasks/test-fixtures.js",
     "lint": "prettier --check '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'",
     "prepublish": "npm run build"
