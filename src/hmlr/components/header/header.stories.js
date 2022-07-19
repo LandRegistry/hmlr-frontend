@@ -5,12 +5,12 @@ import "./_header.scss";
 export default {
   title: "Experimental/Header",
   argTypes: {
-    service: { control: "text" },
+    serviceName: { control: "text" },
   },
 };
 
-const Template = ({ service }) => {
-  return Header({ params: { service } });
+const Template = ({ serviceName }) => {
+  return Header({ params: { serviceName } });
 };
 
 export const Standard = Template.bind({});
@@ -18,5 +18,5 @@ Standard.args = {};
 
 export const ServiceName = Template.bind({});
 ServiceName.args = {
-  service: "My Service",
+  serviceName: "My Service",
 };

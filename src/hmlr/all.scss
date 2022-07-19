@@ -6,7 +6,7 @@
 // before we import our ones so we can be
 // ensured that the version of GovUK used
 // is the correct one
-@import "../../node_modules/govuk-frontend/govuk/all";
+@import "node_modules/govuk-frontend/govuk/all";
 
 // ...and then let us import all our HMLR
 // components

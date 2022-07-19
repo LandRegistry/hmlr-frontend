@@ -9,6 +9,8 @@
 .hmlr-header__link {
   color: #666;
   text-decoration: none;
+  display: inline-block;
+  margin-bottom: govuk-spacing(4);
 }
 
 .hmlr-header__logo {
@@ -17,6 +19,7 @@
 
 .hmlr-header__strapline {
   @include govuk-font($size: 19, $line-height: 19px);
+  vertical-align: middle;
 }
 
 .hmlr-header__service-name {

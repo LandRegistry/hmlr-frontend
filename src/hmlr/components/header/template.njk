@@ -11,5 +11,7 @@
     </svg>
     <span class="hmlr-header__strapline">HM Land Registry</span>
   </a>
-  <p class="hmlr-header__service-name govuk-heading-xl">{{ params.service }}</p>
+{%- if params.serviceName %}
+  <p class="hmlr-header__service-name govuk-heading-xl">{{ params.serviceName }}</p>
+{% endif -%}
 </header>
