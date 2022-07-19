@@ -15,7 +15,7 @@ module.exports = {
     builder: "@storybook/builder-webpack5",
   },
   webpackFinal: async (config, { configType }) => {
-    config.resolve.alias = { ...webpackConfig.resolve.alias };
+    // config.resolve.alias = { ...webpackConfig.resolve.alias };
 
     config.plugins.push(
       new CopyPlugin({

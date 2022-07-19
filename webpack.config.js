@@ -3,14 +3,14 @@ const path = require("path");
 module.exports = {
   entry: "./src/hmlr/scripts/all.mjs",
   mode: "development",
-  resolve: {
-    alias: {
-      "govuk-frontend": path.resolve(
-        __dirname,
-        "node_modules/govuk-frontend"
-      )
-    }
-  },
+  // resolve: {
+  //   alias: {
+  //     "govuk-frontend": path.resolve(
+  //       __dirname,
+  //       "node_modules/govuk-frontend"
+  //     )
+  //   }
+  // },
   module: {
     rules: [
       {
