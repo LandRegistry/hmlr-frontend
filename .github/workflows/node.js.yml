@@ -23,7 +23,5 @@ jobs:
       run: npm run lint
     - name: Test
       run: npm run test
-    - name: Build Storybook
+    - name: Build
       run: npm run build
-    - name: Build distribution files
-      run: npm run dist
