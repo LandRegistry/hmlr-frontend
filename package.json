@@ -7,13 +7,13 @@
     "prestart": "node bin/check-nvmrc.js",
     "start": "start-storybook -p 6006",
     "build": "node bin/check-nvmrc.js && build-storybook -o dist/storybook",
-    "prettier": "node bin/check-nvmrc.js && prettier --write '{src,.storybook,tasks}/**/*.{js,scss,mdx}'",
+    "prettier": "node bin/check-nvmrc.js && prettier --write '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'",
     "dist": "npm run sass && npm run scripts && npm run assets",
     "sass": "node bin/check-nvmrc.js && sass --style=compressed --load-path=node_modules src/hmlr/all.scss dist/hmlr-frontend.css",
     "scripts": "node bin/check-nvmrc.js && webpack",
     "assets": "node bin/check-nvmrc.js && mkdir dist/assets && cp src/hmlr/assets/* dist/assets",
     "test": "node tasks/test-fixtures.js",
-    "lint": "prettier --check '{src,.storybook,tasks}/**/*.{js,scss,mdx}'",
+    "lint": "prettier --check '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'",
     "prepublish": "npm run dist"
   },
   "repository": {
