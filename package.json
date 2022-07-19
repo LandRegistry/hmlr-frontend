@@ -1,6 +1,6 @@
 {
   "name": "@hmlr/frontend",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "HMLR frontend styles",
   "scripts": {
     "prestart": "node bin/check-nvmrc.js",
