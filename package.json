@@ -29,7 +29,8 @@
   },
   "files": [
     "dist",
-    "src"
+    "src",
+    "bin"
   ],
   "homepage": "https://github.com/LandRegistry/hmlr-frontend#readme",
   "dependencies": {
