@@ -1,9 +1,9 @@
-# HM Land Registry Frontend Styles
+# HM Land Registry Frontend
+
+[![NPM version](https://img.shields.io/npm/v/@hmlr/frontend?style=flat-square)](https://www.npmjs.com/package/@hmlr/frontend)
+[![GovUK Frontend version](https://img.shields.io/npm/dependency-version/@hmlr/frontend/govuk-frontend?style=flat-square)](https://www.npmjs.com/package/govuk-frontend)
 
 > 🛑 PRE-ALPHA: Not ready for production use 🛑
-
-![NPM Version](https://img.shields.io/npm/v/@hmlr/frontend?style=flat-square)
-![GovUK Frontend](https://img.shields.io/npm/dependency-version/@hmlr/frontend/govuk-frontend?style=flat-square)
 
 ```
 # Setup
