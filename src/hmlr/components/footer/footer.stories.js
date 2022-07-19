@@ -4,8 +4,7 @@ import "./_footer.scss";
 
 export default {
   title: "Experimental/Footer",
-  argTypes: {
-  },
+  argTypes: {},
 };
 
 const Template = ({ service }) => {
