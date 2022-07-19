@@ -1,9 +1,8 @@
 {
   "name": "@hmlr/frontend",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "HMLR frontend styles",
   "scripts": {
-    "preinstall": "node bin/check-nvmrc.js",
     "prestart": "node bin/check-nvmrc.js",
     "start": "start-storybook -p 6006",
     "build": "node bin/check-nvmrc.js && build-storybook -o dist/storybook && npm run sass && npm run scripts && npm run assets",
@@ -28,9 +27,12 @@
     "node": "16.16.0"
   },
   "files": [
-    "dist",
-    "src",
-    "bin"
+    "dist/assets",
+    "dist/*.js",
+    "dist/*.js.map",
+    "dist/*.css",
+    "dist/*.css.map",
+    "src"
   ],
   "homepage": "https://github.com/LandRegistry/hmlr-frontend#readme",
   "dependencies": {
