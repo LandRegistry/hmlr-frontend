@@ -1,27 +1,5 @@
-.hmlr-header {
-  padding: govuk-spacing(4) govuk-spacing(4) 0;
-
-  background-color: #f2f2f2;
-
-  border-bottom: 10px $hmlr-brand-green solid;
-}
-
-.hmlr-header__link {
-  color: #666;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: govuk-spacing(4);
-}
-
-.hmlr-header__logo {
-  vertical-align: middle;
-}
-
-.hmlr-header__strapline {
-  @include govuk-font($size: 19, $line-height: 19px);
-  vertical-align: middle;
-}
-
-.hmlr-header__service-name {
-  @include govuk-font($size: 48, $line-height: 48px, $weight: 700);
+.govuk-header--hmlr {
+  .govuk-header__container {
+    border-bottom-color: #006637;
+  }
 }
