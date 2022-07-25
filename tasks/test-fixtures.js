@@ -6,7 +6,7 @@ require.extensions[".njk"] = function (module, filename) {
   module.exports = fs.readFileSync(filename, "utf8");
 };
 
-const componentsDirectory = "./src/hmlr/components/";
+const componentsDirectory = "src/hmlr/components/";
 const componentFixturesFile = "/fixtures.json";
 
 glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
@@ -28,16 +28,18 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
     );
 
     const failedFixtures = componentFixtures.fixtures.filter((fixture) => {
-      const result = nunjucks.renderString(componentNunjucksAliased, {
-        params: fixture.options,
-      });
-      const mismatch = result.trim() !== fixture.html;
+      const result = nunjucks
+        .renderString(componentNunjucksAliased, {
+          params: fixture.options,
+        })
+        .trim();
+      const mismatch = result !== fixture.html;
       if (mismatch) {
         console.error(`${component} (${fixture.name})`);
         console.log("--- EXPECTED ----------------------------");
         console.log(fixture.html);
         console.log("---  ACTUAL  ----------------------------");
-        console.log(result.trim());
+        console.log(result);
       }
       return mismatch;
     });
