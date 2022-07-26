@@ -11,7 +11,7 @@
     "scripts": "node bin/check-nvmrc.js && webpack",
     "test": "node tasks/test-fixtures.js",
     "lint": "prettier --check '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
