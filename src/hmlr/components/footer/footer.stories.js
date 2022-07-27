@@ -79,3 +79,51 @@ Navigation.args = {
     },
   ],
 };
+
+export const MetaAndNavigation = Template.bind({});
+MetaAndNavigation.args = {
+  meta: {
+    visuallyHiddenTitle: "Other links",
+    html: "Some HTML",
+    text: "Some text",
+    items: [
+      {
+        text: "Some text",
+        href: "#",
+        attributes: {
+          foo: "bar",
+        },
+      },
+    ],
+  },
+  navigation: [
+    {
+      title: "Navigation section title 1",
+      columns: 4,
+      width: "200px",
+      items: [
+        {
+          text: "Item 1",
+          href: "#",
+          attributes: {
+            foo: "bar",
+          },
+        },
+        {
+          text: "Item 2",
+          href: "#",
+          attributes: {
+            foo: "bar",
+          },
+        },
+        {
+          text: "Item 3",
+          href: "#",
+          attributes: {
+            foo: "bar",
+          },
+        },
+      ],
+    },
+  ],
+};
