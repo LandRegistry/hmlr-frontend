@@ -59,3 +59,60 @@ export const ServiceName = Template.bind({});
 ServiceName.args = {
   serviceName: "My Service",
 };
+
+export const Navigation = Template.bind({});
+Navigation.args = {
+  navigation: [
+    {
+      text: "Item 1",
+      href: "#",
+      active: true,
+      attributes: {
+        foo: "bar",
+      },
+    },
+    {
+      text: "Item 2",
+      href: "#",
+      attributes: {
+        foo: "bar",
+      },
+    },
+    {
+      html: "Item 3",
+      href: "#",
+      attributes: {
+        foo: "bar",
+      },
+    },
+  ],
+};
+
+export const ServiceNameAndNavigation = Template.bind({});
+ServiceNameAndNavigation.args = {
+  serviceName: "My Service",
+  navigation: [
+    {
+      text: "Item 1",
+      href: "#",
+      active: true,
+      attributes: {
+        foo: "bar",
+      },
+    },
+    {
+      text: "Item 2",
+      href: "#",
+      attributes: {
+        foo: "bar",
+      },
+    },
+    {
+      html: "Item 3",
+      href: "#",
+      attributes: {
+        foo: "bar",
+      },
+    },
+  ],
+};
