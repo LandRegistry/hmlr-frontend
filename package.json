@@ -1,9 +1,8 @@
 {
   "name": "@hmlr/frontend",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "HMLR frontend styles",
   "scripts": {
-    "preinstall": "node bin/check-nvmrc.js",
     "prestart": "node bin/check-nvmrc.js",
     "start": "start-storybook -p 6006",
     "build": "node bin/check-nvmrc.js && build-storybook -o dist/storybook && npm run sass && npm run scripts",
