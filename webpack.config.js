@@ -1,16 +1,8 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/hmlr/scripts/all.mjs",
+  entry: "./src/hmlr/all.mjs",
   mode: "development",
-  // resolve: {
-  //   alias: {
-  //     "govuk-frontend": path.resolve(
-  //       __dirname,
-  //       "node_modules/govuk-frontend"
-  //     )
-  //   }
-  // },
   module: {
     rules: [
       {
@@ -26,8 +18,8 @@ module.exports = {
     ]
   },
   output: {
-    filename: "hmlr-frontend.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: "all.js",
+    path: path.resolve(__dirname, "package/hmlr"),
   },
   devtool: "source-map",
 };

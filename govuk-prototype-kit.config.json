@@ -1,14 +1,14 @@
 {
   "nunjucksPaths": [
-    "/src"
+    "/hmlr"
   ],
   "scripts": [
-    "/dist/hmlr-frontend.js"
+    "/hmlr/all.js"
   ],
   "assets": [
-    "/src/hmlr/assets"
+    "/hmlr/assets"
   ],
   "sass": [
-    "/src/hmlr/components/_all.scss"
+    "/hmlr/_all.scss"
   ]
 }

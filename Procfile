@@ -1,1 +1,1 @@
-web: npx http-server dist/storybook
+web: npx http-server storybook

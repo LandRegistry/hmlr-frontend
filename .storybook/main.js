@@ -20,7 +20,7 @@ module.exports = {
     config.plugins.push(
       new CopyPlugin({
         patterns: [
-          { from: "./src/hmlr/scripts", to: "./" },
+          { from: "./src/hmlr", to: "./" },
           // {
           //   from: "./node_modules/govuk-frontend/govuk-esm",
           //   to: "./node_modules/govuk-frontend/govuk-esm",

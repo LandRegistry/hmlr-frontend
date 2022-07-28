@@ -1,38 +1,42 @@
 {
   "name": "@hmlr/frontend",
-  "version": "0.1.13",
+  "version": "0.1.17",
   "description": "HMLR frontend styles",
   "scripts": {
     "prestart": "node bin/check-nvmrc.js",
     "start": "start-storybook -p 6006",
-    "build": "node bin/check-nvmrc.js && build-storybook -o dist/storybook && npm run sass && npm run scripts",
-    "prettier": "node bin/check-nvmrc.js && prettier --write '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'",
-    "sass": "node bin/check-nvmrc.js && sass --style=compressed --quiet-deps --load-path=. src/hmlr/all.scss dist/hmlr-frontend.css",
-    "scripts": "node bin/check-nvmrc.js && webpack",
+    "build": "build-storybook -o storybook",
+    "build:sass": "node bin/check-nvmrc.js && sass --style=compressed --quiet-deps --load-path=. src/hmlr/all.scss package/hmlr/all.css",
+    "build:scripts": "node bin/check-nvmrc.js && webpack",
     "test": "node tasks/test-fixtures.js",
     "lint": "prettier --check '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'",
-    "prepublishOnly": "npm run build"
+    "prettier": "node bin/check-nvmrc.js && prettier --write '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LandRegistry/hmlr-frontend.git"
   },
-  "author": "Andrew Hosgood <andrew.hosgood@landregistry.gov.uk>",
+  "author": {
+    "name":"Andrew Hosgood",
+    "email": "andrew.hosgood@landregistry.gov.uk"
+  },
+  "contributors": [],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/LandRegistry/hmlr-frontend/issues"
   },
+  "main": "hmlr/all.js",
+  "exports": {
+    ".": {
+      "sass": "./hmlr/all.scss",
+      "require": "./hmlr/all.js"
+    },
+    "./hmlr/": "./hmlr/"
+  },
+  "sass": "hmlr/all.scss",
   "engines": {
     "node": "16.16.0"
   },
-  "files": [
-    "dist/*.js",
-    "dist/*.js.map",
-    "dist/*.css",
-    "dist/*.css.map",
-    "src",
-    "govuk-prototype-kit.config.json"
-  ],
   "homepage": "https://github.com/LandRegistry/hmlr-frontend#readme",
   "dependencies": {
     "govuk-frontend": "4.2.0"
