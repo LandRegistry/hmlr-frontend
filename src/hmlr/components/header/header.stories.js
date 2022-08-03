@@ -5,9 +5,6 @@ import "./_header.scss";
 export default {
   title: "Components/Header",
   argTypes: {
-    homepageUrl: { control: "text" },
-    assetsPath: { control: "text" },
-    productName: { control: "text" },
     serviceName: { control: "text" },
     serviceUrl: { control: "text" },
     navigation: { control: "object" },
@@ -21,9 +18,6 @@ export default {
 };
 
 const Template = ({
-  homepageUrl,
-  assetsPath,
-  productName,
   serviceName,
   serviceUrl,
   navigation,
@@ -36,9 +30,6 @@ const Template = ({
 }) => {
   return Header({
     params: {
-      homepageUrl,
-      assetsPath,
-      productName,
       serviceName,
       serviceUrl,
       navigation,
@@ -53,66 +44,35 @@ const Template = ({
 };
 
 export const Standard = Template.bind({});
-Standard.args = {};
-
-export const ServiceName = Template.bind({});
-ServiceName.args = {
+Standard.args = {
   serviceName: "My Service",
 };
 
-export const Navigation = Template.bind({});
-Navigation.args = {
-  navigation: [
-    {
-      text: "Item 1",
-      href: "#",
-      active: true,
-      attributes: {
-        foo: "bar",
-      },
-    },
-    {
-      text: "Item 2",
-      href: "#",
-      attributes: {
-        foo: "bar",
-      },
-    },
-    {
-      html: "Item 3",
-      href: "#",
-      attributes: {
-        foo: "bar",
-      },
-    },
-  ],
-};
-
-export const ServiceNameAndNavigation = Template.bind({});
-ServiceNameAndNavigation.args = {
-  serviceName: "My Service",
-  navigation: [
-    {
-      text: "Item 1",
-      href: "#",
-      active: true,
-      attributes: {
-        foo: "bar",
-      },
-    },
-    {
-      text: "Item 2",
-      href: "#",
-      attributes: {
-        foo: "bar",
-      },
-    },
-    {
-      html: "Item 3",
-      href: "#",
-      attributes: {
-        foo: "bar",
-      },
-    },
-  ],
-};
+// export const Navigation = Template.bind({});
+// Navigation.args = {
+//   serviceName: "My Service",
+//   navigation: [
+//     {
+//       text: "Item 1",
+//       href: "#",
+//       active: true,
+//       attributes: {
+//         foo: "bar",
+//       },
+//     },
+//     {
+//       text: "Item 2",
+//       href: "#",
+//       attributes: {
+//         foo: "bar",
+//       },
+//     },
+//     {
+//       html: "Item 3",
+//       href: "#",
+//       attributes: {
+//         foo: "bar",
+//       },
+//     },
+//   ],
+// };

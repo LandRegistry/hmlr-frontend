@@ -1,5 +1,8 @@
 .govuk-header--hmlr {
   .govuk-header__container {
-    border-bottom-color: $hmlr-brand-colour;
+    margin-bottom: 0;
+
+    // border-bottom-color: $hmlr-brand-colour;
+    border-bottom-width: 0;
   }
 }

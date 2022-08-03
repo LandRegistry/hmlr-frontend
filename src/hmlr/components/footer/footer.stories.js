@@ -3,7 +3,7 @@ import "../../all.scss";
 import "./_footer.scss";
 
 export default {
-  title: "Components/Footer",
+  title: "Experimental/Footer",
   argTypes: {
     containerClasses: { control: "text" },
     classes: { control: "text" },
