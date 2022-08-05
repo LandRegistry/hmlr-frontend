@@ -52,7 +52,7 @@ echo "📦  Publishing package..."
 
 # Try publishing
 cd package
-[ $NPM_TAG = "latest" ] && npm publish --dry-run || npm publish --dry-run --tag $NPM_TAG
+[ $NPM_TAG = "latest" ] && npm publish || npm publish --tag $NPM_TAG
 echo " "
 echo "📫  Package published!"
 cd ..
