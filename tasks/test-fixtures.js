@@ -20,6 +20,7 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
   );
 
   const failedComponents = components.filter((component) => {
+    console.log(`\nComponent: ${component}`);
     const componentFixtures = require(`../${componentsDirectory}${component}${componentFixturesFile}`);
     const componentNunjucks = require(`../${componentsDirectory}${component}/template.njk`);
     const componentNunjucksAliased = componentNunjucks.replace(
@@ -35,35 +36,37 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
         .trim();
       const mismatch = result !== fixture.html;
       if (mismatch) {
-        console.error(`${component} (${fixture.name})`);
+        console.error(`  🔴 [FAIL] ${fixture.name}\n`);
         console.log("--- EXPECTED ----------------------------");
         console.log(fixture.html);
-        console.log("---  ACTUAL  ----------------------------");
+        console.log("\n---  ACTUAL  ----------------------------");
         console.log(result);
+        console.log("\n");
+      } else {
+        console.error(`  🟢 [PASS] ${fixture.name}`);
       }
       return mismatch;
     });
 
-    if (failedFixtures.length) {
-      console.error(
-        `${failedFixtures.length} out of ${componentFixtures.fixtures.length} ${component} fixtures failed`
-      );
-    } else {
-      console.log(
-        `All ${componentFixtures.fixtures.length} ${component} fixture(s) passed successfully`
-      );
-    }
-
+    // if (failedFixtures.length) {
+    //   console.error(
+    //     `🔴 [FAIL] ${failedFixtures.length} out of ${componentFixtures.fixtures.length} ${component} fixture${componentFixtures.fixtures.length === 1 ? "" : "s"} failed`
+    //   );
+    // } else {
+    //   console.log(
+    //     `🟢 [PASS] ${componentFixtures.fixtures.length} ${component} fixture${componentFixtures.fixtures.length === 1 ? "" : "s"} passed successfully`
+    //   );
+    // }
     return failedFixtures.length;
   });
 
-  console.log("------------------------------------------");
+  console.log("\n------------------------------------------");
   if (failedComponents.length) {
     console.error(
-      `${failedComponents.length} out of ${components.length} components failed`
+      `🔴 [FAIL] ${failedComponents.length} out of ${components.length} component${components.length === 1 ? "" : "s"} failed`
     );
   } else {
-    console.log(`All ${components.length} component(s) passed successfully`);
+    console.log(`🟢 [PASS] ${components.length} component${components.length === 1 ? "" : "s"} passed successfully`);
   }
   console.log("------------------------------------------");
 });
