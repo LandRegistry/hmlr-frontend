@@ -39,5 +39,5 @@ Standard.args = {
 export const FullWidth = Template.bind({});
 FullWidth.args = {
   serviceName: "My Service",
-  containerClasses: "govuk-header__container--full-width"
+  containerClasses: "govuk-header__container--full-width",
 };

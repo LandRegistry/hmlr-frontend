@@ -63,10 +63,16 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
   console.log("\n------------------------------------------");
   if (failedComponents.length) {
     console.error(
-      `🔴 [FAIL] ${failedComponents.length} out of ${components.length} component${components.length === 1 ? "" : "s"} failed`
+      `🔴 [FAIL] ${failedComponents.length} out of ${
+        components.length
+      } component${components.length === 1 ? "" : "s"} failed`
     );
   } else {
-    console.log(`🟢 [PASS] ${components.length} component${components.length === 1 ? "" : "s"} passed successfully`);
+    console.log(
+      `🟢 [PASS] ${components.length} component${
+        components.length === 1 ? "" : "s"
+      } passed successfully`
+    );
   }
   console.log("------------------------------------------");
 });
