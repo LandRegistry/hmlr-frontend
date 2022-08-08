@@ -28,100 +28,74 @@ const Template = ({
 export const Standard = Template.bind({});
 Standard.args = {};
 
-export const Meta = Template.bind({});
-Meta.args = {
-  meta: {
-    visuallyHiddenTitle: "Other links",
-    html: "Some HTML",
-    text: "Some text",
-    items: [
-      {
-        text: "Some text",
-        href: "#",
-        attributes: {
-          foo: "bar",
-        },
-      },
-    ],
-  },
-};
-
-export const Navigation = Template.bind({});
-Navigation.args = {
-  navigation: [
-    {
-      title: "Navigation section title 1",
-      columns: 4,
-      width: "200px",
-      items: [
-        {
-          text: "Item 1",
-          href: "#",
-          attributes: {
-            foo: "bar",
-          },
-        },
-        {
-          text: "Item 2",
-          href: "#",
-          attributes: {
-            foo: "bar",
-          },
-        },
-        {
-          text: "Item 3",
-          href: "#",
-          attributes: {
-            foo: "bar",
-          },
-        },
-      ],
-    },
-  ],
-};
-
 export const MetaAndNavigation = Template.bind({});
 MetaAndNavigation.args = {
   meta: {
     visuallyHiddenTitle: "Other links",
-    html: "Some HTML",
-    text: "Some text",
+    html: "Meta <em>HTML</em>",
+    text: "Meta text",
     items: [
       {
-        text: "Some text",
+        text: "Meta item 1",
         href: "#",
-        attributes: {
-          foo: "bar",
-        },
+      },
+      {
+        text: "Meta item 2",
+        href: "#",
+      },
+      {
+        text: "Meta item 3",
+        href: "#",
       },
     ],
   },
   navigation: [
     {
-      title: "Navigation section title 1",
-      columns: 4,
-      width: "200px",
+      title: "Navigation 1",
+      width: "one-third",
       items: [
         {
-          text: "Item 1",
+          text: "Item 1.1",
           href: "#",
-          attributes: {
-            foo: "bar",
-          },
         },
         {
-          text: "Item 2",
+          text: "Item 1.2",
           href: "#",
-          attributes: {
-            foo: "bar",
-          },
         },
         {
-          text: "Item 3",
+          text: "Item 1.3",
           href: "#",
-          attributes: {
-            foo: "bar",
-          },
+        },
+      ],
+    },
+    {
+      title: "Navigation 2",
+      width: "two-thirds",
+      columns: 2,
+      items: [
+        {
+          text: "Item 2.1",
+          href: "#",
+        },
+        {
+          text: "Item 2.2",
+          href: "#",
+        },
+        {
+          text: "Item 2.3",
+          href: "#",
+        },
+        {
+          text: "Item 2.4",
+          href: "#",
+        },
+        {
+          text: "Item 2.5",
+          href: "#",
+        },
+        {
+          text: "Item 2.6",
+          href: "#",
         },
       ],
     },
