@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/LandRegistry/hmlr-frontend#readme",
   "dependencies": {
-    "govuk-frontend": "4.2.0"
+    "govuk-frontend": "4.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
