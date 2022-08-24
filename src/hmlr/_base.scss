@@ -2,5 +2,6 @@ $govuk-include-default-font-face: false;
 $govuk-assets-path: "/node_modules/govuk-frontend/govuk/assets/";
 
 @import "settings/all";
+@import "tools/all";
 
 @import "node_modules/govuk-frontend/govuk/base.scss";

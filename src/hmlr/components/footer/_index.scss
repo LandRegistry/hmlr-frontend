@@ -1,2 +1,15 @@
+// $govuk-footer-crest-image-width: ($govuk-footer-crest-image-width-2x / 2);
+// $govuk-footer-crest-image-height: ($govuk-footer-crest-image-height-2x / 2);
+
 .govuk-footer--hmlr {
+}
+
+.govuk-footer__copyright-logo--hmlr {
+  padding-top: 39px;
+  background-image: hmlr-image-url("logo-greyscale.png");
+  background-size: 125px 39px;
+  //   @include govuk-device-pixel-ratio {
+  //     background-image: govuk-image-url("govuk-crest-2x.png");
+  //   }
+  //   background-size: $govuk-footer-crest-image-width $govuk-footer-crest-image-height;
 }
