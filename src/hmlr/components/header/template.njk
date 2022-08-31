@@ -1,7 +1,7 @@
 <header class="govuk-header govuk-header--hmlr {{ params.classes if params.classes }}" role="banner" data-module="govuk-header"
         {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
   <div class="govuk-header__container {{ params.containerClasses | default('govuk-width-container') }}">
-    <div class="govuk-header__content">
+    <div class="govuk-header__content govuk-header__content--hmlr">
     {% if params.serviceUrl %}
       <a href="{{ params.serviceUrl }}" class="govuk-header__link govuk-header__service-name">
         {{ params.serviceName }}
