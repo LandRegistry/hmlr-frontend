@@ -1,9 +1,18 @@
+<img src="./src/hmlr/assets/images/hmlr_logo.svg" alt="HM Land Registry logo" title="HM Land Registry" align="right" height="60" />
+
 # HM Land Registry Frontend
 
 [![NPM version](https://img.shields.io/npm/v/@hmlr/frontend?style=flat-square)](https://www.npmjs.com/package/@hmlr/frontend)
 [![GovUK Frontend version](https://img.shields.io/npm/dependency-version/@hmlr/frontend/govuk-frontend?style=flat-square)](https://www.npmjs.com/package/govuk-frontend)
+[![Build Status](https://github.com/LandRegistry/hmlr-frontend/workflows/Tests/badge.svg)](https://github.com/LandRegistry/hmlr-frontend/actions/workflows/tests.yml)
 
 > 🛑 PRE-ALPHA: Not ready for production use 🛑
+
+HM Land Registry Frontend contains the code you need to start building a user interface for HM Land Registry platforms and services.
+
+See live examples of HM Land Registry Frontend components, and guidance on when to use them in your service, in the HM Land Registry Design System.
+
+## Quickstart
 
 ```sh
 # Setup
@@ -17,20 +26,4 @@ npm start
 npm run test
 ```
 
-The GovUK frontend styles don't need to be included as a peer dependency alongside this as they are bundled in with the HM Land Registry styles. This way we can ensure that we are using a compatible version of their frontend.
-
-## Release
-
-1. Update version in `package.json`
-1. Run `npm install`
-1. Run `./bin/publish-release.sh`
-
-`publish-release.sh` performs the following actions:
-
-1. Check the version of Node used (`nvm use` to set it correctly)
-1. Run the tests
-1. Build the distribution package
-1. Check existing git tags to see if the version in `package.json` already exists
-1. Check the version in `package-lock.json` matches the version in `package.json` (need to run `npm install`)
-1. Push the new version to npm
-1. Create a new git tag and push to GitHub
+This package includes all the frontend styles from GOV.UK in addition to HM Land Registry styles. The generated CSS can be used as a direct replacement for the GOV.UK stylesheet.
