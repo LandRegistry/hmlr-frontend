@@ -1,9 +1,10 @@
 #!/bin/sh
 set -e
 
-if [ $(git diff --quiet HEAD) ]; then
+if [[ $(git diff --quiet HEAD) ]]; then
     echo " "
     echo "Uncommited changes detected - commit all changes before publishing"
+    exit 0
 fi
 
 source ./bin/build-release.sh
