@@ -4,7 +4,6 @@
 
 [![NPM version](https://img.shields.io/npm/v/@hmlr/frontend?style=flat-square)](https://www.npmjs.com/package/@hmlr/frontend)
 [![GovUK Frontend version](https://img.shields.io/npm/dependency-version/@hmlr/frontend/govuk-frontend?style=flat-square)](https://www.npmjs.com/package/govuk-frontend)
-[![Build Status](https://github.com/LandRegistry/hmlr-frontend/workflows/Tests/badge.svg)](https://github.com/LandRegistry/hmlr-frontend/actions/workflows/tests.yml)
 
 > 🛑 PRE-ALPHA: Not ready for production use 🛑
 
