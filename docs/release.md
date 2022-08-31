@@ -1,8 +1,16 @@
 # Create a new release
 
+Before creating a release:
+
+1. Pick a new version number according to [SemVer](https://semver.org/)
+1. Update [CHANGELOG.md](../CHANGELOG.md)
 1. Update version in `package.json`
-1. Run `npm install`
-1. Run `./bin/publish-release.sh`
+1. Run `npm install` (this ensures `package-lock.json` is up-to-date)
+
+```sh
+# Test, build, package and publish a new release
+./bin/publish-release.sh
+```
 
 `publish-release.sh` performs the following actions:
 
