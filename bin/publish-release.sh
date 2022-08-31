@@ -1,14 +1,14 @@
 #!/bin/sh
 set -e
 
-if [ $(git diff --quiet HEAD) ]; then
-    echo " "
-    echo "No uncommited changes"
-else
-    echo " "
-    echo "Uncommited changes detected - commit all changes before publishing"
-    exit 0
-fi
+# if [ $(git diff --quiet HEAD) ]; then
+#     echo " "
+#     echo "No uncommited changes"
+# else
+#     echo " "
+#     echo "Uncommited changes detected - commit all changes before publishing"
+#     exit 0
+# fi
 
 source ./bin/build-release.sh
 source ./bin/generate-npm-tag.sh
