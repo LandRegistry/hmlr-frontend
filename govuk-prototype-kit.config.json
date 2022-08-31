@@ -9,6 +9,6 @@
     "/hmlr/assets"
   ],
   "sass": [
-    "/hmlr/all.scss"
+    "/hmlr/_prototype-kit.scss"
   ]
 }
