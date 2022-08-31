@@ -1,4 +1,4 @@
-# Creating a new release
+# Create a new release
 
 1. Update version in `package.json`
 1. Run `npm install`
