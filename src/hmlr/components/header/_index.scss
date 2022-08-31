@@ -1,5 +1,7 @@
-.govuk-header--hmlr {
-  .govuk-header__container {
-    border-bottom-color: $hmlr-brand-colour;
+@include govuk-exports("hmlr/component/header") {
+  .govuk-header--hmlr {
+    > .govuk-header__container {
+      border-bottom-color: $hmlr-brand-colour;
+    }
   }
 }
