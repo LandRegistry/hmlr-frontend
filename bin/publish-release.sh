@@ -1,7 +1,10 @@
 #!/bin/sh
 set -e
 
-if [[ $(git diff --quiet HEAD) ]]; then
+if [ $(git diff --quiet HEAD) ]; then
+    echo " "
+    echo "No uncommited changes"
+else
     echo " "
     echo "Uncommited changes detected - commit all changes before publishing"
     exit 0
@@ -37,7 +40,7 @@ read -r -p "Do you want to continue? [y/N] " continue_prompt
 
 if [[ $continue_prompt != 'y' ]]; then
     echo "Cancelling release, if this was a mistake, try again and use 'y' to continue."
-    exit 0
+    exit 1
 fi
 
 echo " "
@@ -55,7 +58,7 @@ TAG="v$ALL_PACKAGE_VERSION"
 if [ $(git tag -l "$TAG") ]; then
     echo " "
     echo "⚠️  Tag $TAG already exists"
-    exit 1
+    exit 2
 else
     echo " "
     echo "🏷  Tagging repo using tag version: $TAG ..."
