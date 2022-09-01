@@ -18,9 +18,6 @@ npm install
 
 # To develop
 npm start
-
-# Test
-npm run test
 ```
 
 This package includes all the frontend styles from GOV.UK in addition to HM Land Registry styles. The generated CSS can be used as a direct replacement for the GOV.UK stylesheet.
