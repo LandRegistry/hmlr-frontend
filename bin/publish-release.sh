@@ -10,6 +10,12 @@ set -e
 #     exit 0
 # fi
 
+CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+if [ $CURRENT_BRANCH != "main" ]; then
+  echo "This script should only be run on the main branch."
+  exit 1
+fi
+
 source ./bin/build-release.sh
 source ./bin/generate-npm-tag.sh
 
@@ -40,7 +46,7 @@ read -r -p "Do you want to continue? [y/N] " continue_prompt
 
 if [[ $continue_prompt != 'y' ]]; then
     echo "Cancelling release, if this was a mistake, try again and use 'y' to continue."
-    exit 1
+    exit 2
 fi
 
 echo " "
@@ -58,7 +64,7 @@ TAG="v$ALL_PACKAGE_VERSION"
 if [ $(git tag -l "$TAG") ]; then
     echo " "
     echo "⚠️  Tag $TAG already exists"
-    exit 2
+    exit 3
 else
     echo " "
     echo "🏷  Tagging repo using tag version: $TAG ..."
