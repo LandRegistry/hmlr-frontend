@@ -52,13 +52,13 @@
         {% endif %}
       </div>
       <div class="govuk-footer__meta-item">
-        <span
-          class="govuk-footer__link govuk-footer__copyright-logo govuk-footer__copyright-logo--hmlr"
-        >
-          {%- if params.copyright.html or params.copyright.text -%}
-            {{ params.copyright.html | safe if params.copyright.html else params.copyright.text }}
-          {%- endif -%}
-        </span>
+        {%- if params.logo and params.logo.text and params.logo.href -%}
+          <a class="govuk-footer__link govuk-footer__copyright-logo govuk-footer__copyright-logo--hmlr" href="{{ params.logo.href }}">
+            {{ params.logo.text }}
+          </a>
+        {%- else -%}
+          <span class="govuk-footer__link govuk-footer__copyright-logo govuk-footer__copyright-logo--hmlr"></span>
+        {%- endif -%}
       </div>
     </div>
   </div>

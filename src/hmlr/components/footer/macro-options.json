@@ -120,5 +120,25 @@
         "type": "object",
         "required": false,
         "description": "HTML attributes (for example data attributes) to add to the footer component container."
+    },
+    {
+        "name": "logo",
+        "type": "object",
+        "required": false,
+        "description": "Object containing options for the footer logo.",
+        "params": [
+            {
+                "name": "text",
+                "type": "string",
+                "required": true,
+                "description": "Link for the footer logo."
+            },
+            {
+                "name": "href",
+                "type": "string",
+                "required": true,
+                "description": "Link for the footer logo. Both `text` and `href` attributes need to be present to create a link."
+            }
+        ]
     }
 ]

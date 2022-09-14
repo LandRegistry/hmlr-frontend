@@ -10,6 +10,7 @@ export default {
     attributes: { control: "text" },
     meta: { control: "object" },
     navigation: { control: "object" },
+    logo: { control: "object" },
   },
 };
 
@@ -19,9 +20,10 @@ const Template = ({
   attributes,
   meta,
   navigation,
+  logo,
 }) => {
   return Footer({
-    params: { containerClasses, classes, attributes, meta, navigation },
+    params: { containerClasses, classes, attributes, meta, navigation, logo },
   });
 };
 
@@ -100,4 +102,8 @@ MetaAndNavigation.args = {
       ],
     },
   ],
+  logo: {
+    text: "HM Land Registry",
+    href: "#",
+  },
 };
