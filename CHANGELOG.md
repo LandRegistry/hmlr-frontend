@@ -14,11 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - ?
 
-## [1.0.0] - yyyy-mm-dd
+## [1.0.0-rc1] - 2022-09-14
 ### Added
 - Initial header component
 - Initial footer component
 
-[Unreleased]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.0.0...HEAD
-<!-- [1.1.0]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.0.0...v1.1.0 -->
-[1.0.0]: https://github.com/LandRegistry/hmlr-frontend/releases/tag/v1.0.0
+[Unreleased]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.0.0-rc1...HEAD
+[1.0.0-rc1]: https://github.com/LandRegistry/hmlr-frontend/releases/tag/v1.0.0-rc1
