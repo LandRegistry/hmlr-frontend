@@ -20,4 +20,6 @@ npm install
 npm start
 ```
 
-This package includes all the frontend styles from GOV.UK in addition to HM Land Registry styles. The generated CSS can be used as a direct replacement for the GOV.UK stylesheet.
+This package includes all the frontend styles from GOV.UK in addition to HM Land Registry styles.
+
+The generated CSS can be used as a direct replacement for the GOV.UK stylesheet which ensures that the HM Land Registry styles will be build on top of a complient version of the GOV.UK frontend styles.
