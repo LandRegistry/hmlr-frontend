@@ -35,7 +35,8 @@
   },
   "sass": "hmlr/all.scss",
   "engines": {
-    "node": "16.16.0"
+    "npm": "8.x",
+    "node": "16.x"
   },
   "homepage": "https://github.com/LandRegistry/hmlr-frontend#readme",
   "dependencies": {
