@@ -3,14 +3,13 @@
   "version": "1.0.0-rc1",
   "description": "HMLR frontend styles",
   "scripts": {
-    "prestart": "node bin/check-nvmrc.js",
     "start": "start-storybook -p 6006",
     "build": "build-storybook -o storybook",
-    "build:sass": "node bin/check-nvmrc.js && sass --style=compressed --quiet-deps --load-path=. src/hmlr/all.scss package/hmlr/all.css",
-    "build:scripts": "node bin/check-nvmrc.js && webpack",
+    "build:sass": "sass --style=compressed --quiet-deps --load-path=. src/hmlr/all.scss package/hmlr/all.css",
+    "build:scripts": "webpack",
     "test": "node tasks/test-fixtures.js",
     "lint": "prettier --check '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'",
-    "prettier": "node bin/check-nvmrc.js && prettier --write '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'"
+    "prettier": "prettier --write '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'"
   },
   "repository": {
     "type": "git",

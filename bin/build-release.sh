@@ -1,5 +1,4 @@
 #!/bin/sh
-node bin/check-nvmrc.js
 npm run test
 rm -fR package
 npm run build:sass
