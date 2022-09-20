@@ -23,3 +23,7 @@ npm start
 This package includes all the frontend styles from GOV.UK in addition to HM Land Registry styles.
 
 The generated CSS can be used as a direct replacement for the GOV.UK stylesheet which ensures that the HM Land Registry styles will be build on top of a complient version of the GOV.UK frontend styles.
+
+## LFS
+
+Some assets in this repository require [Git LFS](https://git-lfs.github.com/) to be installed in order to properly clone the repository.
