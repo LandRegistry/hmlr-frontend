@@ -9,11 +9,9 @@ PACKAGE_LOCK_VERSION=$(node -p "require('./package-lock.json').version")
 HIGHEST_GIT_TAG=$(git tag --list 2>/dev/null | sort -V | tail -n1 2>/dev/null | sed 's/v//g')
 
 if [ $CURRENT_VERSION != $PACKAGE_LOCK_VERSION ]; then
-  echo " "
-  echo "⚠️ Version $CURRENT_VERSION in package/package.json doesn't match version $PACKAGE_LOCK_VERSION in package-lock.json."
+  echo "Version $CURRENT_VERSION in package/package.json doesn't match version $PACKAGE_LOCK_VERSION in package-lock.json."
   exit 1
 elif [ $CURRENT_VERSION == $HIGHEST_GIT_TAG ]; then
-  echo " "
-  echo "⚠️ Git tag $HIGHEST_GIT_TAG already exists. Check you have updated the version in package/package.json correctly."
+  echo "Git tag $HIGHEST_GIT_TAG already exists. Check you have updated the version in package/package.json correctly."
   exit 1
 fi

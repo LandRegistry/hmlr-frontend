@@ -7,9 +7,9 @@
     "build": "build-storybook -o storybook",
     "build:sass": "sass --style=compressed --quiet-deps --load-path=. src/hmlr/all.scss package/hmlr/all.css",
     "build:scripts": "webpack",
-    "test": "node tasks/test-fixtures.js",
-    "lint": "prettier --check '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'",
-    "prettier": "prettier --write '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'"
+    "test": "node tasks/test-fixtures.js || exit 1",
+    "lint": "prettier --check '{src,.storybook,tasks,bin}/**/*.{js,mjs,scss,mdx,html}'",
+    "prettier": "prettier --write '{src,.storybook,tasks,bin}/**/*.{js,mjs,scss,mdx,html}'"
   },
   "repository": {
     "type": "git",

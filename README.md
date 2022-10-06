@@ -12,11 +12,13 @@ See live examples of HM Land Registry Frontend components, and guidance on when 
 ## Quickstart
 
 ```sh
-# Setup
+# Node version (optional)
 nvm use
+
+# Install dependencies
 npm install
 
-# To develop
+# Start Storybook
 npm start
 ```
 
