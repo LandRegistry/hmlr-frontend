@@ -1,6 +1,7 @@
 import Header from "./template.njk";
 import "../../all.scss";
 import "./_header.scss";
+// import { Header as HeaderScript } from "./header.mjs";
 
 export default {
   title: "Components/Header",
