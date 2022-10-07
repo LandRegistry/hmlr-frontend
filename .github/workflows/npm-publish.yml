@@ -5,7 +5,15 @@ on:
     types: [created]
 
 jobs:
-  build:
+  check-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Check version numbers
+        run: ./bin/validate-version.sh
+
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,18 +30,10 @@ jobs:
       - name: Test
         run: npm run test
 
-  check-version:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Check version numbers
-        run: ./bin/validate-version.sh
-
   publish-npm:
     needs:
-      - build
       - check-version
+      - test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -48,6 +48,6 @@ jobs:
       - name: Build package
         run: ./bin/build-release.sh
       - name: Publish to npm
-        run: npm publish --workspace=package
+        run: cd package && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
