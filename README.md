@@ -2,10 +2,10 @@
 
 # HM Land Registry Frontend
 
-[![Latest release](https://img.shields.io/github/v/release/LandRegistry/hmlr-frontend?style=flat-square&sort=semver)](https://github.com/LandRegistry/hmlr-frontend/releases)
-[![NPM version](https://img.shields.io/npm/v/@hmlr/frontend?style=flat-square)](https://www.npmjs.com/package/@hmlr/frontend)
+[![Latest release](https://img.shields.io/github/v/release/LandRegistry/hmlr-frontend?style=flat-square&logo=github&logoColor=white&sort=semver)](https://github.com/LandRegistry/hmlr-frontend/releases)
+[![NPM version](https://img.shields.io/npm/v/@hmlr/frontend?style=flat-square&logo=npm&logoColor=white)](https://www.npmjs.com/package/@hmlr/frontend)
 [![GovUK Frontend version](https://img.shields.io/npm/dependency-version/@hmlr/frontend/govuk-frontend?style=flat-square)](https://www.npmjs.com/package/govuk-frontend)
-[![Node version](https://img.shields.io/node/v-lts/@hmlr/frontend?style=flat-square)](https://github.com/LandRegistry/hmlr-frontend/blob/main/.nvmrc)
+[![Node version](https://img.shields.io/node/v-lts/@hmlr/frontend?style=flat-square&logo=nodedotjs&logoColor=white)](https://github.com/LandRegistry/hmlr-frontend/blob/main/.nvmrc)
 [![Licence](https://img.shields.io/github/license/LandRegistry/hmlr-frontend?style=flat-square)](https://github.com/LandRegistry/hmlr-frontend/blob/main/LICENCE)
 
 HM Land Registry Frontend contains the code you need to start building a user interface for HM Land Registry platforms and services.
