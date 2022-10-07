@@ -1,16 +1,15 @@
 {
   "name": "@hmlr/frontend",
-  "version": "0.1.21",
-  "description": "HMLR frontend styles",
+  "version": "1.0.0-rc2",
+  "description": "HM Land Registry frontend styles",
   "scripts": {
-    "prestart": "node bin/check-nvmrc.js",
     "start": "start-storybook -p 6006",
     "build": "build-storybook -o storybook",
-    "build:sass": "node bin/check-nvmrc.js && sass --style=compressed --quiet-deps --load-path=. src/hmlr/all.scss package/hmlr/all.css",
-    "build:scripts": "node bin/check-nvmrc.js && webpack",
-    "test": "node tasks/test-fixtures.js",
-    "lint": "prettier --check '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'",
-    "prettier": "node bin/check-nvmrc.js && prettier --write '{src,.storybook,tasks,bin}/**/*.{js,scss,mdx}'"
+    "build:sass": "sass --style=compressed --quiet-deps --load-path=. src/hmlr/all.scss package/hmlr/all.css",
+    "build:scripts": "webpack",
+    "test": "node tasks/test-fixtures.js || exit 1",
+    "lint": "prettier --check '{src,.storybook,tasks,bin}/**/*.{js,mjs,scss,mdx,html}'",
+    "prettier": "prettier --write '{src,.storybook,tasks,bin}/**/*.{js,mjs,scss,mdx,html}'"
   },
   "repository": {
     "type": "git",
@@ -18,9 +17,16 @@
   },
   "author": {
     "name": "Andrew Hosgood",
-    "email": "andrew.hosgood@landregistry.gov.uk"
+    "email": "andrew.hosgood@landregistry.gov.uk",
+    "url" : "https://andrewhosgood.dev"
   },
-  "contributors": [],
+  "contributors": [
+    {
+      "name": "Matt Shaw",
+      "email": "matthew.shaw@landregistry.gov.uk",
+      "url" : "https://www.mashsoftware.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/LandRegistry/hmlr-frontend/issues"
@@ -35,23 +41,24 @@
   },
   "sass": "hmlr/all.scss",
   "engines": {
-    "node": "16.16.0"
+    "npm": "8.x",
+    "node": "16.x"
   },
   "homepage": "https://github.com/LandRegistry/hmlr-frontend#readme",
   "dependencies": {
     "govuk-frontend": "4.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.6",
-    "@babel/preset-env": "^7.18.6",
-    "@mdx-js/react": "^2.1.2",
-    "@storybook/addon-a11y": "^6.5.9",
-    "@storybook/addon-docs": "^6.5.9",
-    "@storybook/addon-essentials": "^6.5.9",
-    "@storybook/addon-links": "^6.5.9",
-    "@storybook/builder-webpack5": "^6.5.9",
-    "@storybook/html": "^6.5.9",
-    "@storybook/manager-webpack5": "^6.5.9",
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@mdx-js/react": "^2.1.3",
+    "@storybook/addon-a11y": "^6.5.12",
+    "@storybook/addon-docs": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/html": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
     "copy-webpack-plugin": "^11.0.0",
@@ -59,11 +66,11 @@
     "glob": "^8.0.3",
     "nunjucks": "^3.2.3",
     "prettier": "^2.7.1",
-    "sass": "^1.53.0",
+    "sass": "^1.54.9",
     "sass-loader": "^13.0.2",
     "simple-nunjucks-loader": "^3.2.0",
     "style-loader": "^3.3.1",
-    "webpack": "^5.73.0",
+    "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   }
 }

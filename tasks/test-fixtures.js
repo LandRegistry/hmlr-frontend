@@ -18,7 +18,6 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
       .replace(new RegExp(`^${componentsDirectory}`), "")
       .replace(new RegExp(`${componentFixturesFile}$`), "")
   );
-
   const failedComponents = components.filter((component) => {
     console.log(`\nComponent: ${component}`);
     const componentFixtures = require(`../${componentsDirectory}${component}${componentFixturesFile}`);
@@ -27,7 +26,6 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
       '{% include "govuk/',
       '{% include "node_modules/govuk-frontend/govuk/'
     );
-
     const failedFixtures = componentFixtures.fixtures.filter((fixture) => {
       const result = nunjucks
         .renderString(componentNunjucksAliased, {
@@ -47,19 +45,8 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
       }
       return mismatch;
     });
-
-    // if (failedFixtures.length) {
-    //   console.error(
-    //     `🔴 [FAIL] ${failedFixtures.length} out of ${componentFixtures.fixtures.length} ${component} fixture${componentFixtures.fixtures.length === 1 ? "" : "s"} failed`
-    //   );
-    // } else {
-    //   console.log(
-    //     `🟢 [PASS] ${componentFixtures.fixtures.length} ${component} fixture${componentFixtures.fixtures.length === 1 ? "" : "s"} passed successfully`
-    //   );
-    // }
     return failedFixtures.length;
   });
-
   console.log("\n------------------------------------------");
   if (failedComponents.length) {
     console.error(
@@ -67,6 +54,7 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
         components.length
       } component${components.length === 1 ? "" : "s"} failed`
     );
+    process.exit(1);
   } else {
     console.log(
       `🟢 [PASS] ${components.length} component${

@@ -4,4 +4,10 @@
       border-bottom-color: $hmlr-brand-colour;
     }
   }
+
+  .govuk-header__content--hmlr {
+    @include govuk-media-query($from: desktop) {
+      padding-left: 0;
+    }
+  }
 }
