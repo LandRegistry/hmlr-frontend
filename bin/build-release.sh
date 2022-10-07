@@ -1,5 +1,5 @@
 #!/bin/sh
-npm run test
+set -e
 rm -fR package
 npm run build:sass
 npm run build:scripts
