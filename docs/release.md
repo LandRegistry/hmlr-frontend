@@ -4,8 +4,8 @@
 
 Before creating a release:
 
-1. Ensure you are working on the `main` branch - releases should only be created from `main`
 1. Pick a new version number according to [SemVer](https://semver.org/)
 1. Update [CHANGELOG.md](../CHANGELOG.md)
 1. Update version in `package.json`
+1. Switch to the correct version of node with `nvm use`
 1. Run `npm install` (this ensures `package-lock.json` is up-to-date)

@@ -4,9 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] - yyyy-mm-dd
+## [1.0.0-rc2] - 2022-10-07
 ### Added
 - Footer component (moved from "Experimental" state)
+- Assets added with git LFS
 ### Changed
 - Updated node version from `16.16.0` to `lts/gallium`
 - Updated dependencies
@@ -19,9 +20,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Removed
 - No longer requires specific node version to run scripts
 
-## [1.0.0-rc1](https://github.com/LandRegistry/hmlr-frontend/releases/tag/1.0.0-rc1) - 20/09/2022
+## [1.0.0-rc1] - 2022-09-20
 ### Added
 - Initial header component
 
-[Unreleased]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.0.0-rc1...HEAD
+[Unreleased]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.0.0-rc2...HEAD
+[1.0.0-rc2]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.0.0-rc1...v1.0.0-rc2
 [1.0.0-rc1]: https://github.com/LandRegistry/hmlr-frontend/releases/tag/v1.0.0-rc1

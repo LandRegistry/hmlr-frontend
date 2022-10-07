@@ -1,7 +1,7 @@
 {
   "name": "@hmlr/frontend",
-  "version": "1.0.0-rc1",
-  "description": "HMLR frontend styles",
+  "version": "1.0.0-rc2",
+  "description": "HM Land Registry frontend styles",
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "build-storybook -o storybook",
@@ -17,9 +17,16 @@
   },
   "author": {
     "name": "Andrew Hosgood",
-    "email": "andrew.hosgood@landregistry.gov.uk"
+    "email": "andrew.hosgood@landregistry.gov.uk",
+    "url" : "https://andrewhosgood.dev"
   },
-  "contributors": [],
+  "contributors": [
+    {
+      "name": "Matt Shaw",
+      "email": "matthew.shaw@landregistry.gov.uk",
+      "url" : "https://www.mashsoftware.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/LandRegistry/hmlr-frontend/issues"
