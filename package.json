@@ -42,7 +42,7 @@
   "sass": "hmlr/all.scss",
   "engines": {
     "npm": "8.x",
-    "node": "16.x"
+    "node": "18.x"
   },
   "homepage": "https://github.com/LandRegistry/hmlr-frontend#readme",
   "dependencies": {
@@ -60,7 +60,7 @@
     "@storybook/html": "^6.5.12",
     "@storybook/manager-webpack5": "^6.5.12",
     "@storybook/testing-library": "^0.0.13",
-    "babel-loader": "^8.2.5",
+    "babel-loader": "^9.0.1",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "glob": "^8.0.3",
