@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased] - yyyy-mm-dd
 ### Changed
 - Updated node version from `lts/gallium` to `lts/hydrogen`
+- Updated `govuk-frontend` to `4.4.0`
+- Updated node dependencies
 
 ## [1.0.0] - 2022-11-02
 First stable release. No changes since `1.0.0-rc2`.
