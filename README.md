@@ -10,7 +10,7 @@
 
 HM Land Registry Frontend contains the code you need to start building a user interface for HM Land Registry platforms and services.
 
-See live examples of HM Land Registry Frontend components, and guidance on when to use them in your service, in the HM Land Registry Design System.
+See live examples of HM Land Registry Frontend components, and guidance on when to use them in your service in the [HM Land Registry Design System](https://github.com/LandRegistry/hmlr-design-system).
 
 ## Quickstart
 
