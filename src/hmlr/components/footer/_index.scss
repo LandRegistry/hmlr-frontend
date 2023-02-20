@@ -8,7 +8,7 @@
     min-width: $hmlr-footer-logo-width;
     padding-top: ($hmlr-footer-logo-height + govuk-spacing(2));
     background-image: hmlr-image-url("hmlr-logo-grey.svg");
-    filter: saturate(250%) grayscale(100%) brightness(72.5%) contrast(250%);
+    filter: saturate(300%) grayscale(100%) brightness(64%) contrast(350%);
     // To overwrite the 2x GOV.UK logo
     @include govuk-device-pixel-ratio {
       background-image: hmlr-image-url("hmlr-logo-grey.svg");
