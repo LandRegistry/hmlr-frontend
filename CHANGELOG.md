@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Added web assets, such as icons and OG images in order to mirror `govuk-frontend`
 ### Changed
 - Fixed the `govuk-frontend` import path, removing the need to prefix with `node_modules/`
+- Changed the logo in the footer component to an SVG and used CSS filters to change to a grayscale version
 
 ## [1.1.0] - 2022-11-16
 ### Changed
