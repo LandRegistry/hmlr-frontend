@@ -1,6 +1,6 @@
 @include govuk-exports("hmlr/component/footer") {
   $hmlr-footer-logo-width-2x: 344px;
-  $hmlr-footer-logo-height-2x: 106px;
+  $hmlr-footer-logo-height-2x: 110px;
   $hmlr-footer-logo-width: calc($hmlr-footer-logo-width-2x / 2);
   $hmlr-footer-logo-height: calc($hmlr-footer-logo-height-2x / 2);
 
@@ -8,7 +8,7 @@
     min-width: $hmlr-footer-logo-width;
     padding-top: ($hmlr-footer-logo-height + govuk-spacing(2));
     background-image: hmlr-image-url("hmlr-logo-grey.svg");
-    filter: grayscale(100%) brightness(0.75) contrast(200%);
+    filter: saturate(250%) grayscale(100%) brightness(72.5%) contrast(250%);
     // To overwrite the 2x GOV.UK logo
     @include govuk-device-pixel-ratio {
       background-image: hmlr-image-url("hmlr-logo-grey.svg");
