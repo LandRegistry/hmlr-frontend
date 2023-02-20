@@ -1,4 +1,4 @@
-<img src="./src/hmlr/assets/images/hmlr_icon.svg" alt="HM Land Registry logo" title="HM Land Registry" align="right" width="80" />
+<img src="./src/hmlr/assets/images/hmlr-logo-grey.svg" alt="HM Land Registry logo" title="HM Land Registry" width="120" />
 
 # HM Land Registry Frontend
 
