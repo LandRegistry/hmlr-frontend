@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] - yyyy-mm-dd
+## [1.2.0] - 2023-02-21
 ### Added
 - Added web assets, such as icons and OG images in order to mirror `govuk-frontend`
 ### Changed
@@ -43,7 +43,8 @@ First stable release. No changes since `1.0.0-rc2`.
 ### Added
 - Initial header component
 
-[Unreleased]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.0.0-rc2...v1.0.0
 [1.0.0-rc2]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.0.0-rc1...v1.0.0-rc2
