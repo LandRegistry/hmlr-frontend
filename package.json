@@ -5,7 +5,7 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "build-storybook -o storybook",
-    "build:sass": "sass --style=compressed --quiet-deps --load-path=. src/hmlr/all.scss package/hmlr/all.css",
+    "build:sass": "sass --style=compressed --quiet-deps --load-path=node_modules src/hmlr/all.scss package/hmlr/all.css",
     "build:scripts": "webpack",
     "test": "node tasks/test-fixtures.js || exit 1",
     "lint": "prettier --check '{src,.storybook,tasks,bin}/**/*.{js,mjs,scss,mdx,html}'",

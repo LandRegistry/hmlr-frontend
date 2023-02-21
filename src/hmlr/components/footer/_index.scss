@@ -1,16 +1,17 @@
 @include govuk-exports("hmlr/component/footer") {
   $hmlr-footer-logo-width-2x: 344px;
-  $hmlr-footer-logo-height-2x: 106px;
+  $hmlr-footer-logo-height-2x: 110px;
   $hmlr-footer-logo-width: calc($hmlr-footer-logo-width-2x / 2);
   $hmlr-footer-logo-height: calc($hmlr-footer-logo-height-2x / 2);
 
   .govuk-footer__copyright-logo--hmlr {
     min-width: $hmlr-footer-logo-width;
     padding-top: ($hmlr-footer-logo-height + govuk-spacing(2));
-    background-image: hmlr-image-url("logo-greyscale.png");
+    background-image: hmlr-image-url("hmlr-logo-grey.svg");
+    filter: saturate(300%) grayscale(100%) brightness(64%) contrast(350%);
     // To overwrite the 2x GOV.UK logo
     @include govuk-device-pixel-ratio {
-      background-image: hmlr-image-url("logo-greyscale.png");
+      background-image: hmlr-image-url("hmlr-logo-grey.svg");
     }
     background-size: $hmlr-footer-logo-width $hmlr-footer-logo-height;
   }
