@@ -1,11 +1,11 @@
 {
   "name": "@hmlr/frontend",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "HM Land Registry frontend styles",
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "build-storybook -o storybook",
-    "build:sass": "sass --style=compressed --quiet-deps --load-path=. src/hmlr/all.scss package/hmlr/all.css",
+    "build:sass": "sass --style=compressed --quiet-deps --load-path=node_modules src/hmlr/all.scss package/hmlr/all.css",
     "build:scripts": "webpack",
     "test": "node tasks/test-fixtures.js || exit 1",
     "lint": "prettier --check '{src,.storybook,tasks,bin}/**/*.{js,mjs,scss,mdx,html}'",
@@ -46,7 +46,7 @@
   },
   "homepage": "https://github.com/LandRegistry/hmlr-frontend#readme",
   "dependencies": {
-    "govuk-frontend": "4.4.0"
+    "govuk-frontend": "4.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",
