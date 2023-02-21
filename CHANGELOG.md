@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] - yyyy-mm-dd
 
+## [1.2.1] - 2023-02-21
+### Changed
+- Renamed `hmlr-mask-icon.svg` to `mask-icon.svg`
+
 ## [1.2.0] - 2023-02-21
 ### Added
 - Added web assets, such as icons and OG images in order to mirror `govuk-frontend`
