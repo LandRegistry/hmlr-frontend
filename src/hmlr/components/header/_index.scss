@@ -10,4 +10,22 @@
       padding-left: 0;
     }
   }
+
+  .govuk-header__logo--hmlr {
+  }
+
+  .govuk-header__logotype--hmlr {
+    position: relative;
+    top: -1px;
+    margin-right: 1px;
+    fill: currentcolor;
+    vertical-align: top;
+  }
+
+  .govuk-header__link--no-hover {
+    &:hover {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
 }
