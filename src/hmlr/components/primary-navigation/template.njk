@@ -1,0 +1,13 @@
+<nav class="hmlr-primary-navigation govuk-clearfix {{ params.classes if params.classes }}" role="navigation" {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+  <ul class="hmlr-primary-navigation__list {{ params.containerClasses | default('govuk-width-container') }}">
+  {% for item in params.navigation %}
+    {% if item.href and item.text %}
+    <li class="hmlr-primary-navigation__list-item{% if item.active %} hmlr-primary-navigation__list-item--current{% endif %}"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+      <a class="govuk-link govuk-link--no-underline hmlr-primary-navigation__link" href="{{ item.href }}">
+        {{ item.text }}
+      </a>
+    </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+</nav>

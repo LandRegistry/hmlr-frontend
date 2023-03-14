@@ -1,0 +1,26 @@
+[
+        {
+        "name": "containerClasses",
+        "type": "string",
+        "required": false,
+        "description": "Classes for the container, useful if you want to make the navigation fixed width."
+    },
+    {
+        "name": "classes",
+        "type": "string",
+        "required": false,
+        "description": "Classes to add to the navigation container."
+    },
+    {
+        "name": "attributes",
+        "type": "object",
+        "required": false,
+        "description": "HTML attributes (for example data attributes) to add to the navigation container."
+    },
+    {
+        "name": "navigation",
+        "type": "array",
+        "required": false,
+        "description": "An array of navigation item objects."
+    }
+]

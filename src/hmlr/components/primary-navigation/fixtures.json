@@ -1,0 +1,38 @@
+{
+    "component": "primary-navigation",
+    "fixtures": [
+        {
+            "name": "default",
+            "options": {},
+            "html": "<nav class=\"hmlr-primary-navigation govuk-clearfix \" role=\"navigation\">\n  <ul class=\"hmlr-primary-navigation__list govuk-width-container\">\n  \n  </ul>\n</nav>",
+            "hidden": false
+        },
+        {
+            "name": "full width",
+            "options": {
+                "containerClasses": "hmlr-primary-navigation__container--full-width"
+            },
+            "html": "<nav class=\"hmlr-primary-navigation govuk-clearfix \" role=\"navigation\">\n  <ul class=\"hmlr-primary-navigation__list hmlr-primary-navigation__container--full-width\">\n  \n  </ul>\n</nav>",
+            "hidden": false
+        },
+        {
+            "name": "attributes",
+            "options": {
+                "attributes": {
+                    "data-test-attribute": "value",
+                    "data-test-attribute-2": "value-2"
+                }
+            },
+            "html": "<nav class=\"hmlr-primary-navigation govuk-clearfix \" role=\"navigation\" data-test-attribute=\"value\" data-test-attribute-2=\"value-2\">\n  <ul class=\"hmlr-primary-navigation__list govuk-width-container\">\n  \n  </ul>\n</nav>",
+            "hidden": true
+        },
+        {
+            "name": "classes",
+            "options": {
+                "classes": "hmlr-primary-navigation--custom-modifier"
+            },
+            "html": "<nav class=\"hmlr-primary-navigation govuk-clearfix hmlr-primary-navigation--custom-modifier\" role=\"navigation\">\n  <ul class=\"hmlr-primary-navigation__list govuk-width-container\">\n  \n  </ul>\n</nav>",
+            "hidden": true
+        }
+    ]
+}
