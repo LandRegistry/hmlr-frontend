@@ -3,11 +3,36 @@
     > .govuk-header__container {
       border-bottom-color: $hmlr-brand-colour;
     }
+
+    &.govuk-header__bottom-border--hmlr {
+      // border-bottom-color: $hmlr-brand-colour;
+      //   > .govuk-header__container {
+      //     // position: relative;
+
+      //     &::after {
+      //       height: govuk-spacing(2);
+      //       position: absolute;
+      //       top: 100%;
+      //       left: 0;
+      //       right: 0;
+      //       background-color: $hmlr-brand-colour;
+      //       content: "";
+      //     }
+      //   }
+    }
   }
 
   .govuk-header__content--hmlr {
     @include govuk-media-query($from: desktop) {
       padding-left: 0;
+    }
+  }
+
+  .govuk-header__logo {
+    padding-right: 70px; // Space for the menu button on smaller screens
+
+    @include govuk-media-query($from: desktop) {
+      padding-right: 0;
     }
   }
 
@@ -27,7 +52,7 @@
   }
 
   .hmlr-header-navigation {
-    margin-top: govuk-spacing(-2);
+    // margin-top: govuk-spacing(-2);
     border-top: govuk-spacing(2) $hmlr-brand-colour solid;
     border-bottom: 1px solid $govuk-border-colour;
     background-color: $hmlr-header-navigation-background-colour;
@@ -72,7 +97,7 @@
     }
 
     // Expand the touch area of the link to the full menu width
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       top: 0;
