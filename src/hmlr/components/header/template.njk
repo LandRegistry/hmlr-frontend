@@ -1,6 +1,11 @@
+{% set headerContainerClassWidth = "govuk-header__container--full-width" if params.fullWidth else "govuk-width-container" %}
+{% set navigationContainerClassWidth = "hmlr-header-navigation__container--full-width" if params.fullWidth else "govuk-width-container" %}
+{% set menuButtonText = params.menuButtonText if params.menuButtonText else 'Menu' %}
+
+
 <header class="govuk-header govuk-header--hmlr {{ params.classes if params.classes }}" role="banner" data-module="govuk-header"
         {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
-  <div class="govuk-header__container {{ params.containerClasses | default('govuk-width-container') }}">
+  <div class="govuk-header__container {{ headerContainerClassWidth }} {{ params.containerClasses }}">
     {% if params.productName or params.logo %}
     <div class="govuk-header__logo">
       {% if params.homepageUrl %}
@@ -47,4 +52,31 @@
     {% endif %}
     </div>
   </div>
+
+  <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="{{ params.menuButtonLabel | default('Show or hide menu') }}" hidden>{{ menuButtonText }}</button>
+
+
+
+
 </header>
+{% if params.navigation | length %}
+<nav class="hmlr-header-navigation govuk-clearfix {{ params.navigationClasses if params.navigationClasses }}" aria-label="{{ params.navigationLabel | default(menuButtonText) }}" role="navigation" {%- for attribute, value in params.navigationAttributes %} {{attribute}}="{{value}}"{% endfor %}>
+
+
+
+
+  <div class="hmlr-header-navigation__container {{ navigationContainerClassWidth }} {{ params.navigationContainerClasses }}">
+    <ul id="navigation" class="hmlr-header-navigation__list">
+    {% for item in params.navigation %}
+      {% if item.href and item.text %}
+      <li class="hmlr-header-navigation__list-item{% if item.active %} hmlr-header-navigation__list-item--current{% endif %}"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+        <a class="govuk-link govuk-link--no-underline hmlr-header-navigation__link" href="{{ item.href }}">
+          {{ item.text }}
+        </a>
+      </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+</nav>
+{% endif %}

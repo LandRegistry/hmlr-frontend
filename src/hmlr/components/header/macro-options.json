@@ -12,6 +12,12 @@
         "description": "URL for the service name anchor."
     },
     {
+        "name": "navigation",
+        "type": "array",
+        "required": false,
+        "description": "An array of navigation item objects."
+    },
+    {
         "name": "containerClasses",
         "type": "string",
         "required": false,

@@ -10,9 +10,16 @@ export default {
     homepageUrl: { control: "text" },
     serviceName: { control: "text" },
     serviceUrl: { control: "text" },
-    containerClasses: { control: "text" },
+    navigation: { control: "object" },
+    navigationLabel: { control: "text" },
+    menuButtonLabel: { control: "text" },
+    fullWidth: { control: "boolean" },
     classes: { control: "text" },
+    containerClasses: { control: "text" },
     attributes: { control: "text" },
+    navigationClasses: { control: "text" },
+    navigationContainerClasses: { control: "text" },
+    navigationAttributes: { control: "text" },
   },
 };
 
@@ -22,9 +29,16 @@ const Template = ({
   homepageUrl,
   serviceName,
   serviceUrl,
-  containerClasses,
+  navigation,
+  navigationLabel,
+  menuButtonLabel,
+  fullWidth,
   classes,
+  containerClasses,
   attributes,
+  navigationClasses,
+  navigationContainerClasses,
+  navigationAttributes,
 }) => {
   return Header({
     params: {
@@ -33,9 +47,16 @@ const Template = ({
       homepageUrl,
       serviceName,
       serviceUrl,
+      navigation,
+      navigationLabel,
+      menuButtonLabel,
+      fullWidth,
       containerClasses,
       classes,
       attributes,
+      navigationClasses,
+      navigationContainerClasses,
+      navigationAttributes,
     },
   });
 };
@@ -54,7 +75,7 @@ ServiceNameWithLink.args = {
 export const FullWidth = Template.bind({});
 FullWidth.args = {
   serviceName: "My Service",
-  containerClasses: "govuk-header__container--full-width",
+  fullWidth: true
 };
 
 export const WithLogo = Template.bind({});
@@ -63,9 +84,23 @@ WithLogo.args = {
   serviceName: "My Service",
 };
 
+export const WithLogoAndLink = Template.bind({});
+WithLogoAndLink.args = {
+  logo: true,
+  homepageUrl: "#",
+  serviceName: "My Service",
+};
+
 export const WithProductName = Template.bind({});
 WithProductName.args = {
-  productName: "My Product",
+  productName: "HM Land Registry",
+  serviceName: "My Service",
+};
+
+export const WithProductNameAndLink = Template.bind({});
+WithProductNameAndLink.args = {
+  homepageUrl: "#",
+  productName: "HM Land Registry",
   serviceName: "My Service",
 };
 
@@ -82,4 +117,28 @@ WithProductNameAndLogoAndLink.args = {
   productName: "My Product",
   homepageUrl: "#",
   serviceName: "My Service",
+};
+
+export const KitchenSink = Template.bind({});
+KitchenSink.args = {
+  logo: true,
+  productName: "My Product",
+  homepageUrl: "#",
+  serviceName: "My Service",
+  serviceUrl: "#",
+  navigation: [
+    {
+      text: "Page 1",
+      href: "#",
+      active: true,
+    },
+    {
+      text: "Page 2",
+      href: "#",
+    },
+    {
+      text: "Page 3",
+      href: "#",
+    },
+  ],
 };
