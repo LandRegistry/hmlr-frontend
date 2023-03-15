@@ -21,10 +21,10 @@ module.exports = {
       new CopyPlugin({
         patterns: [
           { from: "./src/hmlr", to: "./" },
-          // {
-          //   from: "./node_modules/govuk-frontend/govuk-esm",
-          //   to: "./node_modules/govuk-frontend/govuk-esm",
-          // },
+          {
+            from: "./node_modules/govuk-frontend/govuk",
+            to: "./node_modules/govuk-frontend/govuk",
+          },
         ],
       })
     );

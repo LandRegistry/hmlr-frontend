@@ -1,24 +1,40 @@
 const path = require("path");
+const glob = require('glob');
 
 module.exports = {
-  entry: "./src/hmlr/all.mjs",
-  mode: "development",
+  entry: {
+    main: {
+      import: "./src/hmlr/all.mjs",
+      filename: "all.js",
+      library: {
+        name: "HMLRFrontend",
+        type: "umd"
+      }
+    },
+    ...glob.sync('./src/hmlr/components/**/*.mjs').reduce((acc, path) => {
+      acc[path.replace('./src/hmlr/', '').replace('.mjs', '')] = path;
+      return acc;
+    }, {})
+  },
+  mode: "production",
   module: {
     rules: [
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
-    ]
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+    ],
   },
   output: {
-    filename: "all.js",
+    library: ["HMLRFrontend", "[name]"],
+    libraryTarget: "umd",
+    umdNamedDefine: true,
     path: path.resolve(__dirname, "package/hmlr"),
   },
   devtool: "source-map",

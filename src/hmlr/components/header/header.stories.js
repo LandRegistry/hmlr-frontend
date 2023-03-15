@@ -75,7 +75,7 @@ ServiceNameWithLink.args = {
 export const FullWidth = Template.bind({});
 FullWidth.args = {
   serviceName: "My Service",
-  fullWidth: true
+  fullWidth: true,
 };
 
 export const WithLogo = Template.bind({});
