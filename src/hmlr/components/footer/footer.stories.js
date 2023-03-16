@@ -1,16 +1,23 @@
 import Footer from "./template.njk";
 import "../../all.scss";
 import "./_footer.scss";
+import macroOptions from "./macro-options.json";
+
+const argTypes = {
+  containerClasses: { control: "text" },
+  classes: { control: "text" },
+  attributes: { control: "text" },
+  meta: { control: "object" },
+  navigation: { control: "object" },
+}
+
+Object.keys(argTypes).forEach(argType => {
+  argTypes[argType].description = macroOptions.find(option => option.name === argType)?.description
+})
 
 export default {
   title: "Components/Footer",
-  argTypes: {
-    containerClasses: { control: "text" },
-    classes: { control: "text" },
-    attributes: { control: "text" },
-    meta: { control: "object" },
-    navigation: { control: "object" },
-  },
+  argTypes
 };
 
 const Template = ({

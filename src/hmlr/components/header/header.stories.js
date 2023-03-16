@@ -1,26 +1,33 @@
 import Header from "./template.njk";
 import "../../all.scss";
 import "./_header.scss";
+import macroOptions from "./macro-options.json";
+
+const argTypes = {
+  logo: { control: "boolean" },
+  productName: { control: "text" },
+  homepageUrl: { control: "text" },
+  serviceName: { control: "text" },
+  serviceUrl: { control: "text" },
+  navigation: { control: "object" },
+  navigationLabel: { control: "text" },
+  menuButtonLabel: { control: "text" },
+  fullWidth: { control: "boolean" },
+  classes: { control: "text" },
+  containerClasses: { control: "text" },
+  attributes: { control: "text" },
+  navigationClasses: { control: "text" },
+  navigationContainerClasses: { control: "text" },
+  navigationAttributes: { control: "text" },
+}
+
+Object.keys(argTypes).forEach(argType => {
+  argTypes[argType].description = macroOptions.find(option => option.name === argType)?.description
+})
 
 export default {
   title: "Components/Header",
-  argTypes: {
-    logo: { control: "boolean" },
-    productName: { control: "text" },
-    homepageUrl: { control: "text" },
-    serviceName: { control: "text" },
-    serviceUrl: { control: "text" },
-    navigation: { control: "object" },
-    navigationLabel: { control: "text" },
-    menuButtonLabel: { control: "text" },
-    fullWidth: { control: "boolean" },
-    classes: { control: "text" },
-    containerClasses: { control: "text" },
-    attributes: { control: "text" },
-    navigationClasses: { control: "text" },
-    navigationContainerClasses: { control: "text" },
-    navigationAttributes: { control: "text" },
-  },
+  argTypes
 };
 
 const Template = ({

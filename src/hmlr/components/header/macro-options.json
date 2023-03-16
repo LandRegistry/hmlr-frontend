@@ -1,5 +1,23 @@
 [
     {
+        "name": "logo",
+        "type": "boolean",
+        "required": false,
+        "description": ""
+    },
+    {
+        "name": "productName",
+        "type": "string",
+        "required": false,
+        "description": ""
+    },
+    {
+        "name": "homepageUrl",
+        "type": "string",
+        "required": false,
+        "description": ""
+    },
+    {
         "name": "serviceName",
         "type": "string",
         "required": true,
@@ -15,13 +33,51 @@
         "name": "navigation",
         "type": "array",
         "required": false,
-        "description": "An array of navigation item objects."
+        "description": "An array of navigation item objects.",
+        "params": [
+            {
+                "name": "text",
+                "type": "string",
+                "required": true,
+                "description": ""
+            },
+            {
+                "name": "href",
+                "type": "string",
+                "required": true,
+                "description": ""
+            },
+            {
+                "name": "active",
+                "type": "boolean",
+                "required": false,
+                "description": ""
+            },
+            {
+                "name": "attributes",
+                "type": "object",
+                "required": false,
+                "description": "HTML attributes (for example data attributes) to add to the navigation item."
+            }
+        ]
     },
     {
-        "name": "containerClasses",
+        "name": "navigationLabel",
         "type": "string",
         "required": false,
-        "description": "Classes for the container, useful if you want to make the header fixed width."
+        "description": ""
+    },
+    {
+        "name": "menuButtonLabel",
+        "type": "string",
+        "required": false,
+        "description": ""
+    },
+    {
+        "name": "fullWidth",
+        "type": "boolean",
+        "required": false,
+        "description": ""
     },
     {
         "name": "classes",
@@ -30,9 +86,33 @@
         "description": "Classes to add to the header container."
     },
     {
+        "name": "containerClasses",
+        "type": "string",
+        "required": false,
+        "description": "Classes for the container, useful if you want to make the header fixed width."
+    },
+    {
         "name": "attributes",
         "type": "object",
         "required": false,
         "description": "HTML attributes (for example data attributes) to add to the header container."
+    },
+    {
+        "name": "navigationClasses",
+        "type": "string",
+        "required": false,
+        "description": ""
+    },
+    {
+        "name": "navigationContainerClasses",
+        "type": "string",
+        "required": false,
+        "description": ""
+    },
+    {
+        "name": "navigationAttributes",
+        "type": "string",
+        "required": false,
+        "description": ""
     }
 ]

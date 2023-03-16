@@ -1,5 +1,6 @@
 const glob = require("glob");
-var fs = require("fs");
+const fs = require("fs");
+const Diff = require("diff");
 const nunjucks = require("nunjucks");
 
 require.extensions[".njk"] = function (module, filename) {
@@ -35,10 +36,15 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
       const mismatch = result !== fixture.html;
       if (mismatch) {
         console.error(`  🔴 [FAIL] ${fixture.name}\n`);
-        console.log("--- EXPECTED ----------------------------");
-        console.log(fixture.html);
-        console.log("\n---  ACTUAL  ----------------------------");
-        console.log(result);
+        const diff = Diff.diffChars(fixture.html, result)
+          .map(
+            (part) =>
+              `${
+                part.added ? "\x1b[32m" : part.removed ? "\x1b[31m" : "\x1b[0m"
+              }${part.value}`
+          )
+          .join("");
+        console.log(diff);
         console.log("\n");
       } else {
         console.error(`  🟢 [PASS] ${fixture.name}`);

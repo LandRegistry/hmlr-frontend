@@ -18,13 +18,13 @@
   "author": {
     "name": "Andrew Hosgood",
     "email": "andrew.hosgood@landregistry.gov.uk",
-    "url" : "https://andrewhosgood.dev"
+    "url": "https://andrewhosgood.dev"
   },
   "contributors": [
     {
       "name": "Matt Shaw",
       "email": "matthew.shaw@landregistry.gov.uk",
-      "url" : "https://www.mashsoftware.com"
+      "url": "https://www.mashsoftware.com"
     }
   ],
   "license": "MIT",
@@ -63,6 +63,7 @@
     "babel-loader": "^9.0.1",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
+    "diff": "^5.1.0",
     "glob": "^8.0.3",
     "nunjucks": "^3.2.3",
     "prettier": "^2.7.1",

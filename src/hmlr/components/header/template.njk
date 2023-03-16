@@ -1,9 +1,10 @@
 {% set headerContainerClassWidth = "govuk-header__container--full-width" if params.fullWidth else "govuk-width-container" %}
 {% set navigationContainerClassWidth = "hmlr-header-navigation__container--full-width" if params.fullWidth else "govuk-width-container" %}
 {% set menuButtonText = params.menuButtonText if params.menuButtonText else 'Menu' %}
+{% set hasNavigation = params.navigation | length %}
 
 <header
-    class="govuk-header hmlr-header{% if params.navigation | length %} hmlr-header--has-menu{% endif %} {{ params.classes if params.classes }}"
+    class="govuk-header hmlr-header{% if hasNavigation %} hmlr-header--has-menu{% endif %} {{ params.classes if params.classes }}"
     role="banner"
     data-module="hmlr-header"
     {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}
@@ -54,6 +55,7 @@
       </span>
     {% endif %}
     </div>
+    {% if hasNavigation %}
     <button
         type="button"
         class="govuk-header__menu-button hmlr-js-header-toggle"
@@ -61,8 +63,9 @@
         aria-label="{{ params.menuButtonLabel | default('Show or hide menu') }}"
         hidden
     >{{ menuButtonText }}</button>
+    {% endif %}
   </div>
-  {% if params.navigation | length %}
+  {% if hasNavigation %}
   <nav
       id="navigation"
       class="hmlr-header-navigation govuk-clearfix {{ params.navigationClasses if params.navigationClasses }}"
