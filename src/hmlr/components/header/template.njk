@@ -2,8 +2,13 @@
 {% set navigationContainerClassWidth = "hmlr-header-navigation__container--full-width" if params.fullWidth else "govuk-width-container" %}
 {% set menuButtonText = params.menuButtonText if params.menuButtonText else 'Menu' %}
 
-<header class="govuk-header govuk-header--hmlr {{ params.classes if params.classes }}{% if params.navigation | length %} govuk-header__bottom-border--hmlr{% endif %}" role="banner" data-module="hmlr-header" {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
-  <div class="govuk-header__container {{ headerContainerClassWidth }} {{ params.containerClasses }}">
+<header
+    class="govuk-header hmlr-header{% if params.navigation | length %} hmlr-header--has-menu{% endif %} {{ params.classes if params.classes }}"
+    role="banner"
+    data-module="hmlr-header"
+    {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}
+>
+  <div class="govuk-header__container hmlr-header__container {{ headerContainerClassWidth }} {{ params.containerClasses }}">
     {% if params.productName or params.logo %}
     <div class="govuk-header__logo">
       {% if params.homepageUrl %}
@@ -49,10 +54,22 @@
       </span>
     {% endif %}
     </div>
-    <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="{{ params.menuButtonLabel | default('Show or hide menu') }}" hidden>{{ menuButtonText }}</button>
+    <button
+        type="button"
+        class="govuk-header__menu-button hmlr-js-header-toggle"
+        aria-controls="navigation"
+        aria-label="{{ params.menuButtonLabel | default('Show or hide menu') }}"
+        hidden
+    >{{ menuButtonText }}</button>
   </div>
   {% if params.navigation | length %}
-  <nav id="navigation" class="hmlr-header-navigation govuk-clearfix {{ params.navigationClasses if params.navigationClasses }}" aria-label="{{ params.navigationLabel | default(menuButtonText) }}" role="navigation" {%- for attribute, value in params.navigationAttributes %} {{attribute}}="{{value}}"{% endfor %}>
+  <nav
+      id="navigation"
+      class="hmlr-header-navigation govuk-clearfix {{ params.navigationClasses if params.navigationClasses }}"
+      aria-label="{{ params.navigationLabel | default(menuButtonText) }}"
+      role="navigation"
+      {%- for attribute, value in params.navigationAttributes %} {{attribute}}="{{value}}"{% endfor %}
+  >
     <div class="hmlr-header-navigation__container {{ navigationContainerClassWidth }} {{ params.navigationContainerClasses }}">
       <ul class="hmlr-header-navigation__list">
       {% for item in params.navigation %}

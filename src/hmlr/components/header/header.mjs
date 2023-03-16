@@ -4,8 +4,7 @@
 
 function Header($module) {
   this.$module = $module;
-  this.$menuButton =
-    $module && $module.querySelector(".govuk-js-header-toggle");
+  this.$menuButton = $module && $module.querySelector(".hmlr-js-header-toggle");
   this.$menu =
     this.$menuButton &&
     $module.querySelector("#" + this.$menuButton.getAttribute("aria-controls"));
@@ -70,6 +69,7 @@ Header.prototype.init = function () {
  */
 Header.prototype.syncState = function () {
   if (this.mql.matches) {
+    this.$module.classList.remove("hmlr-header--menu-open");
     this.$menu.removeAttribute("hidden");
     this.$menuButton.setAttribute("hidden", "");
   } else {
@@ -77,8 +77,10 @@ Header.prototype.syncState = function () {
     this.$menuButton.setAttribute("aria-expanded", this.menuIsOpen);
 
     if (this.menuIsOpen) {
+      this.$module.classList.add("hmlr-header--menu-open");
       this.$menu.removeAttribute("hidden");
     } else {
+      this.$module.classList.remove("hmlr-header--menu-open");
       this.$menu.setAttribute("hidden", "");
     }
   }
