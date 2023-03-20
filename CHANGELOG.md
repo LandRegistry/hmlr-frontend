@@ -6,7 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] - yyyy-mm-dd
 ### Added
-- Header has the ability to contain a navigation bar
+- Header has the ability to contain a logo, navigation bar, service name, link to homepage
+### Changed
+- Header can be made full width using `fullWidth` boolean property rather than having to add a class to `containerClasses`
 
 ## [1.2.1] - 2023-02-21
 ### Changed
