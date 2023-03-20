@@ -18,7 +18,7 @@ jobs:
       - name: Lint
         run: npm run lint
       - name: Test
-        run: npm run test
+        run: node tasks/test-fixtures.js || exit 1
 
   build:
     runs-on: ubuntu-latest
@@ -34,3 +34,5 @@ jobs:
         run: npm ci
       - name: Build package
         run: ./bin/build-release.sh
+      - name: Test package
+        run: node tasks/test-package.js || exit 1

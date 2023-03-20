@@ -47,7 +47,7 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
         console.log(diff);
         console.log("\n");
       } else {
-        console.error(`  🟢 [PASS] ${fixture.name}`);
+        console.log(`  🟢 [PASS] ${fixture.name}`);
       }
       return mismatch;
     });
