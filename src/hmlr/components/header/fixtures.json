@@ -21,7 +21,7 @@
             "options": {
                 "serviceName": "Service Name"
             },
-            "html": "<header\n    class=\"govuk-header hmlr-header \"\n    role=\"banner\"\n    data-module=\"hmlr-header\"\n>\n  <div class=\"govuk-header__container hmlr-header__container govuk-width-container \">\n    \n    <div class=\"govuk-header__content govuk-header__content--hmlr\">\n    \n      <span class=\"govuk-header__service-name\">\n        Service Name\n      </span>\n    \n    </div>\n    \n  </div>\n  \n</header>",
+            "html": "<header\n    class=\"govuk-header xhmlr-header \"\n    role=\"banner\"\n    data-module=\"hmlr-header\"\n>\n  <div class=\"govuk-header__container hmlr-header__container govuk-width-container \">\n    \n    <div class=\"govuk-header__content govuk-header__content--hmlr\">\n    \n      <span class=\"govuk-header__service-name\">\n        Service Name\n      </span>\n    \n    </div>\n    \n  </div>\n  \n</header>",
             "hidden": false
         },
         {

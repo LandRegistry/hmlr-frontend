@@ -31,6 +31,7 @@ const checkExists = [
   "hmlr/all.js",
   "hmlr/all.mjs",
   "hmlr/all.scss",
+  "foobar",
 ];
 
 console.log(`Testing package file structure`);
