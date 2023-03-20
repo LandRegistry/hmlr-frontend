@@ -9,15 +9,17 @@ const argTypes = {
   attributes: { control: "text" },
   meta: { control: "object" },
   navigation: { control: "object" },
-}
+};
 
-Object.keys(argTypes).forEach(argType => {
-  argTypes[argType].description = macroOptions.find(option => option.name === argType)?.description
-})
+Object.keys(argTypes).forEach((argType) => {
+  argTypes[argType].description = macroOptions.find(
+    (option) => option.name === argType
+  )?.description;
+});
 
 export default {
   title: "Components/Footer",
-  argTypes
+  argTypes,
 };
 
 const Template = ({

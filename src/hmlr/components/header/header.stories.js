@@ -19,15 +19,17 @@ const argTypes = {
   navigationClasses: { control: "text" },
   navigationContainerClasses: { control: "text" },
   navigationAttributes: { control: "text" },
-}
+};
 
-Object.keys(argTypes).forEach(argType => {
-  argTypes[argType].description = macroOptions.find(option => option.name === argType)?.description
-})
+Object.keys(argTypes).forEach((argType) => {
+  argTypes[argType].description = macroOptions.find(
+    (option) => option.name === argType
+  )?.description;
+});
 
 export default {
   title: "Components/Header",
-  argTypes
+  argTypes,
 };
 
 const Template = ({
