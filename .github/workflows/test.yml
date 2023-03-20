@@ -20,7 +20,7 @@ jobs:
       - name: Test
         run: node tasks/test-fixtures.js || exit 1
 
-  build:
+  package:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

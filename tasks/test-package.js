@@ -5,6 +5,7 @@ let failure = null;
 
 const packageDirectory = "package";
 const checkExists = [
+  "",
   "package.json",
   "govuk-prototype-kit.config.json",
   "README.md",
@@ -33,29 +34,21 @@ const checkExists = [
 ];
 
 console.log(`Testing package file structure`);
-try {
-  fs.accessSync(packageDirectory);
-  console.log(`🟢 [PASS] Package directory exists: ${packageDirectory}`);
+checkExists.forEach((checkFile) => {
+  const checkFilePath = `${packageDirectory}/${checkFile}`;
 
-  checkExists.forEach((checkFile) => {
-    const checkFilePath = `${packageDirectory}/${checkFile}`;
-
-    try {
-      fs.accessSync(checkFilePath);
-      console.log(
-        `🟢 [PASS] ${
-          fs.lstatSync(checkFilePath).isDirectory() ? "Directory" : "File"
-        } exists: ${checkFilePath}`
-      );
-    } catch (err) {
-      console.error(`🔴 [FAIL] ${err}`);
-      failure = 2;
-    }
-  });
-} catch (err) {
-  console.error(`🔴 [FAIL] ${err}`);
-  failure = 1;
-}
+  try {
+    fs.accessSync(checkFilePath);
+    console.log(
+      `🟢 [PASS] ${
+        fs.lstatSync(checkFilePath).isDirectory() ? "Directory" : "File"
+      } exists: ${checkFilePath.replace(/\/$/, "")}`
+    );
+  } catch (err) {
+    console.error(`🔴 [FAIL] ${err}`);
+    failure = 1;
+  }
+});
 
 console.log("------------------------------------------");
 
@@ -67,7 +60,7 @@ if (packageJson.version === compiledPackageJson.version) {
   console.error(
     `🔴 [FAIL] The package version should be ${packageJson.version} but is ${compiledPackageJson.version}`
   );
-  failure = 3;
+  failure = 2;
 }
 
 console.log("------------------------------------------");
@@ -94,7 +87,7 @@ expectedPrototypeKitConfigProperties.forEach(
       console.error(
         `🔴 [FAIL] The prototype kit config is missing "${expectedPrototypeKitConfigProperty}"`
       );
-      failure = 4;
+      failure = 3;
     }
   }
 );
