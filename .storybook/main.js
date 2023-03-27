@@ -22,8 +22,8 @@ module.exports = {
         patterns: [
           { from: "./src/hmlr", to: "./" },
           {
-            from: "./node_modules/govuk-frontend/govuk",
-            to: "./node_modules/govuk-frontend/govuk",
+            from: "./node_modules/govuk-frontend",
+            to: "./node_modules/govuk-frontend",
           },
         ],
       })
