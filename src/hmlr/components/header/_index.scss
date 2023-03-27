@@ -8,7 +8,7 @@
   }
 
   .hmlr-header--has-menu {
-    &::after {
+    .js-enabled &::after {
       height: govuk-spacing(2);
       position: absolute;
       top: 100%;
