@@ -1,5 +1,6 @@
 @include govuk-exports("hmlr/component/header") {
   $navigation-height: 50px;
+  $navigation-height-mobile: 40px; // Is this needed?
 
   .hmlr-header {
     position: relative;
@@ -79,15 +80,23 @@
   .hmlr-header-navigation__list-item {
     position: relative;
 
-    @include govuk-font(19, $weight: bold, $line-height: $navigation-height);
+    @include govuk-font(
+      19,
+      $weight: bold,
+      $line-height: $navigation-height-mobile
+    );
     box-sizing: border-box;
-    height: $navigation-height;
-    height: govuk-px-to-rem($navigation-height);
+    height: $navigation-height-mobile;
+    height: govuk-px-to-rem($navigation-height-mobile);
     padding: 0 govuk-spacing(3);
 
-    // @include govuk-media-query($from: tablet) {
     display: inline-block;
-    // }
+
+    @include govuk-media-query($from: tablet) {
+      @include govuk-font(19, $weight: bold, $line-height: $navigation-height);
+      height: $navigation-height;
+      height: govuk-px-to-rem($navigation-height);
+    }
   }
 
   .hmlr-header-navigation__list-item--current {
