@@ -39,7 +39,7 @@
     }
   }
 
-  .govuk-header__logo {
+  .govuk-header__logo--hmlr {
     .hmlr-header--has-menu & {
       padding-right: 70px; // Space for the menu button on smaller screens
     }
@@ -49,14 +49,18 @@
     }
   }
 
-  .govuk-header__logotype--hmlr {
+  // .hmlr-header__logotype {}
+
+  .hmlr-header__logotype-logo {
     position: relative;
     top: -1px;
     margin-right: 1px;
     fill: currentcolor;
     vertical-align: top;
+    filter: grayscale(1) brightness(0.85) contrast(2); // White logo?
   }
 
+  // Only required if homepageUrl is not mandatory
   .govuk-header__link--no-hover {
     &:hover {
       margin-bottom: 0;
@@ -65,7 +69,6 @@
   }
 
   .hmlr-header-navigation {
-    // margin-top: govuk-spacing(-2);
     border-top: govuk-spacing(2) $hmlr-brand-colour solid;
     border-bottom: 1px solid $govuk-border-colour;
     background-color: $hmlr-header-navigation-background-colour;

@@ -11,7 +11,7 @@
 >
   <div class="govuk-header__container hmlr-header__container {{ headerContainerClassWidth }} {{ params.containerClasses }}">
     {% if params.productName or params.logo %}
-    <div class="govuk-header__logo">
+    <div class="govuk-header__logo govuk-header__logo--hmlr">
       {% if params.homepageUrl %}
       <a href="{{ params.homepageUrl | default('/') }}" class="govuk-header__link govuk-header__link--homepage">
       {% else %}
@@ -21,7 +21,7 @@
         <span class="govuk-header__logotype">
           <svg aria-hidden="true"
             focusable="false"
-            class="govuk-header__logotype--hmlr"
+            class="hmlr-header__logotype-logo"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 178.82 57.2"
             height="30"
