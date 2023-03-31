@@ -54,6 +54,24 @@
         {{ params.serviceName }}
       </span>
     {% endif %}
+
+      <!--
+      <nav aria-label="Menu" class="govuk-header__navigation ">
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" hidden>Menu</button>
+        <ul id="navigation" class="govuk-header__navigation-list">
+        {% for item in params.navigation %}
+          {% if item.href and item.text %}
+          <li class="govuk-header__navigation-item{% if item.active %} govuk-header__navigation-item--active{% endif %}"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+            <a class="govuk-header__link" href="{{ item.href }}">
+              {{ item.text }}
+            </a>
+          </li>
+          {% endif %}
+        {% endfor %}
+        </ul>
+      </nav>
+      -->
+
     </div>
     {% if hasNavigation %}
     <button
