@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] - yyyy-mm-dd
 
+## [1.3.0] - 2023-05-23
+### Changed
+- Updated `govuk-frontend` to `4.6.0`
+
 ## [1.2.1] - 2023-02-21
 ### Changed
 - Renamed `hmlr-mask-icon.svg` to `mask-icon.svg`
@@ -49,7 +53,8 @@ First stable release. No changes since `1.0.0-rc2`.
 ### Added
 - Initial header component
 
-[Unreleased]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.2.1...HEAD
+[Unreleased]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.0.0...v1.1.0
