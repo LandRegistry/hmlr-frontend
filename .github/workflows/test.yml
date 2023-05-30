@@ -33,4 +33,7 @@ jobs:
       - name: Install
         run: npm ci
       - name: Build package
-        run: ./bin/build-release.sh
+        run: |
+             chmod +x ./bin/build-release.sh
+             ./bin/build-release.sh
+        shell: bash
