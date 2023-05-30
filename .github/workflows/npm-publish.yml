@@ -11,7 +11,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Check version numbers
-        run: ./bin/validate-version.sh
+        run: |
+             chmod +x ./bin/validate-version.sh
+             ./bin/validate-version.sh
+        shell: bash
 
   test:
     runs-on: ubuntu-latest
@@ -46,7 +49,10 @@ jobs:
       - name: Install
         run: npm ci
       - name: Build package
-        run: ./bin/build-release.sh
+        run: |
+             chmod +x ./bin/build-release.sh
+             ./bin/build-release.sh
+        shell: bash
       - name: Publish to npm
         run: cd package && npm publish
         env:
