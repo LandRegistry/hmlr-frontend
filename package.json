@@ -24,7 +24,7 @@
     {
       "name": "Matt Shaw",
       "email": "matthew.shaw@landregistry.gov.uk",
-      "url" : "https://www.mashsoftware.com"
+      "url" : "https://matthew-shaw.github.io/"
     }
   ],
   "license": "MIT",
@@ -41,7 +41,7 @@
   },
   "sass": "hmlr/all.scss",
   "engines": {
-    "npm": "8.x",
+    "npm": "9.x",
     "node": "18.x"
   },
   "homepage": "https://github.com/LandRegistry/hmlr-frontend#readme",
