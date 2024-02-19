@@ -24,7 +24,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: lts/hydrogen
+          node-version: lts/iron
           cache: npm
       - name: Install
         run: npm ci
@@ -44,7 +44,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: lts/hydrogen
+          node-version: lts/iron
           registry-url: https://registry.npmjs.org/
       - name: Install
         run: npm ci
