@@ -8,14 +8,14 @@ on:
     types: [created]
 
 jobs:
- check-version:
+  check-version:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Check version numbers
         run: |
-             chmod +x ./bin/validate-version.sh
-             ./bin/validate-version.sh
+          chmod +x ./bin/validate-version.sh
+          ./bin/validate-version.sh
         shell: bash
 
   test:
@@ -42,8 +42,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: |
-             chmod +x ./bin/build-release.sh
-             ./bin/build-release.sh
+          chmod +x ./bin/build-release.sh
+          ./bin/build-release.sh
         shell: bash
       - run: cd package && npm publish
         env:
