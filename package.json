@@ -1,6 +1,6 @@
 {
   "name": "@hmlr/frontend",
-  "version": "1.4.0",
+  "version": "1.4.0-rc.1",
   "description": "HM Land Registry frontend styles",
   "scripts": {
     "start": "start-storybook -p 6006",

@@ -6,13 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] - yyyy-mm-dd
 
-## [1.4.0] - 2024-02-xx
+## [1.4.0-rc.1] - 2024-02-20
 
 ### Changed
 
 - Updated `govuk-frontend` to `4.8.0`
 - Updated npm to v10.x and node to v20.x
 - Updated all other dependencies to latest minor versions
+- Updated GitHub actions to non-Node 16 actions, to resolve deprecation warnings on build.
 
 ## [1.3.1] - 2023-11-09
 
