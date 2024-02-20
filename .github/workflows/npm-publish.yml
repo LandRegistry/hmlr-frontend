@@ -1,3 +1,6 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+
 name: Node.js Package
 
 on:
@@ -8,30 +11,23 @@ jobs:
   check-version:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Check version numbers
         run: |
-             chmod +x ./bin/validate-version.sh
-             ./bin/validate-version.sh
+          chmod +x ./bin/validate-version.sh
+          ./bin/validate-version.sh
         shell: bash
 
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Set up Node
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: lts/hydrogen
-          cache: npm
-      - name: Install
-        run: npm ci
-      - name: Lint
-        run: npm run lint
-      - name: Test
-        run: npm run test
+          node-version: lts/iron
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test
 
   publish-npm:
     needs:
@@ -39,21 +35,16 @@ jobs:
       - test
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Set up Node
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: lts/hydrogen
+          node-version: lts/iron
           registry-url: https://registry.npmjs.org/
-      - name: Install
-        run: npm ci
-      - name: Build package
-        run: |
-             chmod +x ./bin/build-release.sh
-             ./bin/build-release.sh
+      - run: npm ci
+      - run: |
+          chmod +x ./bin/build-release.sh
+          ./bin/build-release.sh
         shell: bash
-      - name: Publish to npm
-        run: cd package && npm publish
+      - run: cd package && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}

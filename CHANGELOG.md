@@ -6,51 +6,91 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] - yyyy-mm-dd
 
-## [1.3.0] - 2023-05-23
+## [1.4.0-rc.1] - 2024-02-20
+
 ### Changed
+
+- Updated `govuk-frontend` to `4.8.0`
+- Updated npm to v10.x and node to v20.x
+- Updated all other dependencies to latest minor versions
+- Updated GitHub actions to non-Node 16 actions, to resolve deprecation warnings on build.
+
+## [1.3.1] - 2023-11-09
+
+### Changed
+
+- Updated `govuk-frontend` version to v4.7.0
+- Updated npm version to v9.x
+- Updated all other dependencies to latest minor versions
+
+## [1.3.0] - 2023-05-23
+
+### Changed
+
 - Updated `govuk-frontend` to `4.6.0`
 
 ## [1.2.1] - 2023-02-21
+
 ### Changed
+
 - Renamed `hmlr-mask-icon.svg` to `mask-icon.svg`
 
 ## [1.2.0] - 2023-02-21
+
 ### Added
+
 - Added web assets, such as icons and OG images in order to mirror `govuk-frontend`
+
 ### Changed
+
 - Changed the logo in the footer component to an SVG and used CSS filters to change to a grayscale version
 - Updated `govuk-frontend` to `4.5.0`
 - Updated node dependencies
+
 ### Fixed
+
 - Fixed the `govuk-frontend` import path, removing the need to prefix with `node_modules/`
 
 ## [1.1.0] - 2022-11-16
+
 ### Changed
+
 - Updated node version from `lts/gallium` to `lts/hydrogen`
 - Updated `govuk-frontend` to `4.4.0`
 - Updated node dependencies
 
 ## [1.0.0] - 2022-11-02
+
 First stable release. No changes since `1.0.0-rc2`.
 
 ## [1.0.0-rc2] - 2022-10-07
+
 ### Added
+
 - Footer component (moved from "Experimental" state)
 - Assets added with git LFS
+
 ### Changed
+
 - Updated node version from `16.16.0` to `lts/gallium`
 - Updated dependencies
 - Class of `govuk-header__content--hmlr` added to header
+
 ### Fixed
+
 - nunjucks import is fixed for use in the GOV.UK prototype kit
 - SASS import is fixed for use in the GOV.UK prototype kit
 - Assets now work when used in the GOV.UK prototype kit
 - Header spacing fixed to align site name to left of body wrapper
+
 ### Removed
+
 - No longer requires specific node version to run scripts
 
 ## [1.0.0-rc1] - 2022-09-20
+
 ### Added
+
 - Initial header component
 
 [Unreleased]: https://github.com/LandRegistry/hmlr-frontend/compare/v1.3.0...HEAD
