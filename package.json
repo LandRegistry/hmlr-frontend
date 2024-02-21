@@ -1,6 +1,6 @@
 {
   "name": "@hmlr/frontend",
-  "version": "1.5.0",
+  "version": "2.0.0",
   "description": "HM Land Registry frontend styles",
   "scripts": {
     "start": "start-storybook -p 6006",
@@ -66,11 +66,11 @@
     "glob": "^8.1.0",
     "nunjucks": "^3.2.4",
     "prettier": "^2.8.8",
-    "sass": "^1.71.0",
+    "sass": "^1.71.1",
     "sass-loader": "^13.3.3",
     "simple-nunjucks-loader": "^3.2.0",
     "style-loader": "^3.3.4",
-    "webpack": "^5.90.2",
+    "webpack": "^5.90.3",
     "webpack-cli": "^4.10.0"
   }
 }
