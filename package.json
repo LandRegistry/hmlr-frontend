@@ -1,6 +1,6 @@
 {
   "name": "@hmlr/frontend",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "HM Land Registry frontend styles",
   "scripts": {
     "start": "start-storybook -p 6006",
@@ -46,7 +46,7 @@
   },
   "homepage": "https://github.com/LandRegistry/hmlr-frontend#readme",
   "dependencies": {
-    "govuk-frontend": "4.8.0"
+    "govuk-frontend": "5.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",

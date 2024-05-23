@@ -24,7 +24,7 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
     const componentNunjucks = require(`../${componentsDirectory}${component}/template.njk`);
     const componentNunjucksAliased = componentNunjucks.replace(
       '{% include "govuk/',
-      '{% include "node_modules/govuk-frontend/govuk/'
+      '{% include "node_modules/govuk-frontend/dist/govuk/'
     );
 
     const newComponentFixtures = {
