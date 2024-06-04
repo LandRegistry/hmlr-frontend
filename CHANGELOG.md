@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] - yyyy-mm-dd
 
+### Changed
+- Updated `govuk-frontend` to `5.4.0`
+- Updated js/css/assets import paths
+
 ## [1.4.0] - 2024-02-21
 
 ### Fixed
