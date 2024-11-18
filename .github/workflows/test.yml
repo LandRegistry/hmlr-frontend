@@ -2,9 +2,9 @@ name: Test
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   test:
@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: lts/iron
+          node-version: lts/jod
           cache: npm
       - name: Install
         run: npm ci
@@ -32,12 +32,12 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: lts/iron
+          node-version: lts/jod
           cache: npm
       - name: Install
         run: npm ci
       - name: Build package
         run: |
-             chmod +x ./bin/build-release.sh
-             ./bin/build-release.sh
+          chmod +x ./bin/build-release.sh
+          ./bin/build-release.sh
         shell: bash
