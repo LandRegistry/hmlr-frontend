@@ -1,6 +1,6 @@
 # Documentation
 
-* [Create a new release](./release.md)
+- [Create a new release](./release.md)
 
 ## Relationship to other projects
 

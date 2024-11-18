@@ -16,19 +16,15 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
   const components = optionsFiles.map((optionsFile) =>
     optionsFile
       .replace(new RegExp(`^${componentsDirectory}`), "")
-      .replace(new RegExp(`${componentFixturesFile}$`), ""),
+      .replace(new RegExp(`${componentFixturesFile}$`), "")
   );
   const failedComponents = components.filter((component) => {
     console.log(`\nComponent: ${component}`);
-    const componentFixtures = require(
-      `../${componentsDirectory}${component}${componentFixturesFile}`,
-    );
-    const componentNunjucks = require(
-      `../${componentsDirectory}${component}/template.njk`,
-    );
+    const componentFixtures = require(`../${componentsDirectory}${component}${componentFixturesFile}`);
+    const componentNunjucks = require(`../${componentsDirectory}${component}/template.njk`);
     const componentNunjucksAliased = componentNunjucks.replace(
       '{% include "govuk/',
-      '{% include "node_modules/govuk-frontend/dist/govuk/',
+      '{% include "node_modules/govuk-frontend/dist/govuk/'
     );
     const failedFixtures = componentFixtures.fixtures.filter((fixture) => {
       const result = nunjucks
@@ -56,14 +52,14 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
     console.error(
       `🔴 [FAIL] ${failedComponents.length} out of ${
         components.length
-      } component${components.length === 1 ? "" : "s"} failed`,
+      } component${components.length === 1 ? "" : "s"} failed`
     );
     process.exit(1);
   } else {
     console.log(
       `🟢 [PASS] ${components.length} component${
         components.length === 1 ? "" : "s"
-      } passed successfully`,
+      } passed successfully`
     );
   }
   console.log("------------------------------------------");

@@ -16,19 +16,15 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
   const components = optionsFiles.map((optionsFile) =>
     optionsFile
       .replace(new RegExp(`^${componentsDirectory}`), "")
-      .replace(new RegExp(`${componentFixturesFile}$`), ""),
+      .replace(new RegExp(`${componentFixturesFile}$`), "")
   );
 
   components.forEach((component) => {
-    const componentFixtures = require(
-      `../${componentsDirectory}${component}${componentFixturesFile}`,
-    );
-    const componentNunjucks = require(
-      `../${componentsDirectory}${component}/template.njk`,
-    );
+    const componentFixtures = require(`../${componentsDirectory}${component}${componentFixturesFile}`);
+    const componentNunjucks = require(`../${componentsDirectory}${component}/template.njk`);
     const componentNunjucksAliased = componentNunjucks.replace(
       '{% include "govuk/',
-      '{% include "node_modules/govuk-frontend/dist/govuk/',
+      '{% include "node_modules/govuk-frontend/dist/govuk/'
     );
 
     const newComponentFixtures = {
@@ -49,9 +45,9 @@ glob(`${componentsDirectory}*${componentFixturesFile}`, (e, optionsFiles) => {
       (err) => {
         if (err) throw err;
         console.log(
-          `All ${componentFixtures.fixtures.length} ${component} fixture(s) updated successfully`,
+          `All ${componentFixtures.fixtures.length} ${component} fixture(s) updated successfully`
         );
-      },
+      }
     );
   });
 });
