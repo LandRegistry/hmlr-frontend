@@ -63,14 +63,15 @@
     "babel-loader": "^9.2.1",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.11.0",
-    "glob": "^8.1.0",
+    "glob": "^9.3.5",
+    "jsdiff": "^1.1.1",
     "nunjucks": "^3.2.4",
     "prettier": "^2.8.8",
-    "sass": "^1.81.0",
     "sass-loader": "^13.3.3",
+    "sass": "^1.81.0",
     "simple-nunjucks-loader": "^3.2.0",
     "style-loader": "^3.3.4",
-    "webpack": "^5.96.1",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "webpack": "^5.96.1"
   }
 }
