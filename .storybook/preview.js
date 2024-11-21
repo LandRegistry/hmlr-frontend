@@ -7,3 +7,4 @@ export const parameters = {
     disable: true,
   },
 };
+export const tags = ["autodocs"];
