@@ -11,6 +11,7 @@ module.exports = {
     "@storybook/addon-docs",
     "@storybook/addon-a11y",
     "@storybook/addon-webpack5-compiler-babel",
+    "@chromatic-com/storybook",
   ],
 
   framework: {
