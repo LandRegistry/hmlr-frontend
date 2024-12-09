@@ -1,6 +1,6 @@
 {
   "name": "@hmlr/frontend",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "HM Land Registry frontend styles",
   "scripts": {
     "start": "storybook dev -p 6006",
@@ -51,17 +51,17 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.25.9",
+    "@babel/preset-react": "^7.26.3",
     "@babel/preset-typescript": "^7.26.0",
     "@chromatic-com/storybook": "^3.2.2",
     "@mdx-js/react": "^2.3.0",
-    "@storybook/addon-a11y": "^8.4.5",
-    "@storybook/addon-docs": "^8.4.5",
-    "@storybook/addon-essentials": "^8.4.5",
-    "@storybook/addon-links": "^8.4.5",
+    "@storybook/addon-a11y": "^8.4.7",
+    "@storybook/addon-docs": "^8.4.7",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-links": "^8.4.7",
     "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
-    "@storybook/html-webpack5": "^8.4.5",
-    "@storybook/html": "^8.4.5",
+    "@storybook/html-webpack5": "^8.4.7",
+    "@storybook/html": "^8.4.7",
     "babel-loader": "^9.2.1",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.11.0",
@@ -70,11 +70,11 @@
     "nunjucks": "^3.2.4",
     "prettier": "^2.8.8",
     "sass-loader": "^13.3.3",
-    "sass": "^1.81.0",
+    "sass": "^1.82.0",
     "simple-nunjucks-loader": "^3.2.0",
-    "storybook": "^8.4.5",
+    "storybook": "^8.4.7",
     "style-loader": "^3.3.4",
     "webpack-cli": "^4.10.0",
-    "webpack": "^5.96.1"
+    "webpack": "^5.97.1"
   }
 }
