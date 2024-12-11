@@ -31,7 +31,7 @@ module.exports = {
           //   to: "./node_modules/govuk-frontend/govuk-esm",
           // },
         ],
-      })
+      }),
     );
 
     config.module.rules = [

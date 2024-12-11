@@ -13,12 +13,12 @@ async function testComponentFixtures(component) {
     const componentFixtures = JSON.parse(
       await fs.readFile(
         `${componentsDirectory}${component}${componentFixturesFile}`,
-        "utf8"
-      )
+        "utf8",
+      ),
     );
     const componentNunjucks = await fs.readFile(
       `${componentsDirectory}${component}/template.njk`,
-      "utf8"
+      "utf8",
     );
 
     nunjucksEnv.addGlobal("params", {});
@@ -59,13 +59,13 @@ async function testComponentFixtures(component) {
 async function main() {
   try {
     const optionsFiles = await glob(
-      `${componentsDirectory}*${componentFixturesFile}`
+      `${componentsDirectory}*${componentFixturesFile}`,
     ); // Use async glob
 
     const components = optionsFiles.map((optionsFile) =>
       optionsFile
         .replace(new RegExp(`^${componentsDirectory}`), "")
-        .replace(new RegExp(`${componentFixturesFile}$`), "")
+        .replace(new RegExp(`${componentFixturesFile}$`), ""),
     );
 
     const results = await Promise.all(components.map(testComponentFixtures));
@@ -77,7 +77,7 @@ async function main() {
       console.error(
         `🔴 [FAIL] ${failedComponents.length} out of ${
           components.length
-        } component${components.length === 1 ? "" : "s"} failed`
+        } component${components.length === 1 ? "" : "s"} failed`,
       );
       failedComponents.forEach((result) => {
         console.error(`- Component ${result.component}:`);
@@ -88,7 +88,7 @@ async function main() {
       console.log(
         `🟢 [PASS] ${components.length} component${
           components.length === 1 ? "" : "s"
-        } passed successfully`
+        } passed successfully`,
       );
     }
     console.log("------------------------------------------");

@@ -1,56 +1,56 @@
 {
-  "component": "header",
-  "fixtures": [
-    {
-      "name": "default",
-      "options": {},
-      "hidden": false,
-      "html": "<header class=\"govuk-header govuk-header--hmlr \" role=\"banner\" data-module=\"govuk-header\">\n  <div class=\"govuk-header__container govuk-width-container\">\n    <div class=\"govuk-header__content govuk-header__content--hmlr\">\n    \n      <span class=\"govuk-header__service-name\">\n        \n      </span>\n    \n    </div>\n  </div>\n</header>"
-    },
-    {
-      "name": "with service name",
-      "options": {
-        "serviceName": "Service Name",
-        "serviceUrl": "/components/header"
-      },
-      "hidden": false,
-      "html": "<header class=\"govuk-header govuk-header--hmlr \" role=\"banner\" data-module=\"govuk-header\">\n  <div class=\"govuk-header__container govuk-width-container\">\n    <div class=\"govuk-header__content govuk-header__content--hmlr\">\n    \n      <a href=\"/components/header\" class=\"govuk-header__link govuk-header__service-name\">\n        Service Name\n      </a>\n    \n    </div>\n  </div>\n</header>"
-    },
-    {
-      "name": "with service name but no service url",
-      "options": {
-        "serviceName": "Service Name"
-      },
-      "hidden": false,
-      "html": "<header class=\"govuk-header govuk-header--hmlr \" role=\"banner\" data-module=\"govuk-header\">\n  <div class=\"govuk-header__container govuk-width-container\">\n    <div class=\"govuk-header__content govuk-header__content--hmlr\">\n    \n      <span class=\"govuk-header__service-name\">\n        Service Name\n      </span>\n    \n    </div>\n  </div>\n</header>"
-    },
-    {
-      "name": "full width",
-      "options": {
-        "containerClasses": "govuk-header__container--full-width",
-        "navigationClasses": "govuk-header__navigation--end"
-      },
-      "hidden": false,
-      "html": "<header class=\"govuk-header govuk-header--hmlr \" role=\"banner\" data-module=\"govuk-header\">\n  <div class=\"govuk-header__container govuk-header__container--full-width\">\n    <div class=\"govuk-header__content govuk-header__content--hmlr\">\n    \n      <span class=\"govuk-header__service-name\">\n        \n      </span>\n    \n    </div>\n  </div>\n</header>"
-    },
-    {
-      "name": "attributes",
-      "options": {
-        "attributes": {
-          "data-test-attribute": "value",
-          "data-test-attribute-2": "value-2"
+    "component": "header",
+    "fixtures": [
+        {
+            "name": "default",
+            "options": {},
+            "hidden": false,
+            "html": "<header class=\"govuk-header govuk-header--hmlr \" role=\"banner\" data-module=\"govuk-header\">\n  <div class=\"govuk-header__container govuk-width-container\">\n    <div class=\"govuk-header__content govuk-header__content--hmlr\">\n    \n      <span class=\"govuk-header__service-name\">\n        \n      </span>\n    \n    </div>\n  </div>\n</header>"
+        },
+        {
+            "name": "with service name",
+            "options": {
+                "serviceName": "Service Name",
+                "serviceUrl": "/components/header"
+            },
+            "hidden": false,
+            "html": "<header class=\"govuk-header govuk-header--hmlr \" role=\"banner\" data-module=\"govuk-header\">\n  <div class=\"govuk-header__container govuk-width-container\">\n    <div class=\"govuk-header__content govuk-header__content--hmlr\">\n    \n      <a href=\"/components/header\" class=\"govuk-header__link govuk-header__service-name\">\n        Service Name\n      </a>\n    \n    </div>\n  </div>\n</header>"
+        },
+        {
+            "name": "with service name but no service url",
+            "options": {
+                "serviceName": "Service Name"
+            },
+            "hidden": false,
+            "html": "<header class=\"govuk-header govuk-header--hmlr \" role=\"banner\" data-module=\"govuk-header\">\n  <div class=\"govuk-header__container govuk-width-container\">\n    <div class=\"govuk-header__content govuk-header__content--hmlr\">\n    \n      <span class=\"govuk-header__service-name\">\n        Service Name\n      </span>\n    \n    </div>\n  </div>\n</header>"
+        },
+        {
+            "name": "full width",
+            "options": {
+                "containerClasses": "govuk-header__container--full-width",
+                "navigationClasses": "govuk-header__navigation--end"
+            },
+            "hidden": false,
+            "html": "<header class=\"govuk-header govuk-header--hmlr \" role=\"banner\" data-module=\"govuk-header\">\n  <div class=\"govuk-header__container govuk-header__container--full-width\">\n    <div class=\"govuk-header__content govuk-header__content--hmlr\">\n    \n      <span class=\"govuk-header__service-name\">\n        \n      </span>\n    \n    </div>\n  </div>\n</header>"
+        },
+        {
+            "name": "attributes",
+            "options": {
+                "attributes": {
+                    "data-test-attribute": "value",
+                    "data-test-attribute-2": "value-2"
+                }
+            },
+            "hidden": true,
+            "html": "<header class=\"govuk-header govuk-header--hmlr \" role=\"banner\" data-module=\"govuk-header\" data-test-attribute=\"value\" data-test-attribute-2=\"value-2\">\n  <div class=\"govuk-header__container govuk-width-container\">\n    <div class=\"govuk-header__content govuk-header__content--hmlr\">\n    \n      <span class=\"govuk-header__service-name\">\n        \n      </span>\n    \n    </div>\n  </div>\n</header>"
+        },
+        {
+            "name": "classes",
+            "options": {
+                "classes": "app-header--custom-modifier"
+            },
+            "hidden": true,
+            "html": "<header class=\"govuk-header govuk-header--hmlr app-header--custom-modifier\" role=\"banner\" data-module=\"govuk-header\">\n  <div class=\"govuk-header__container govuk-width-container\">\n    <div class=\"govuk-header__content govuk-header__content--hmlr\">\n    \n      <span class=\"govuk-header__service-name\">\n        \n      </span>\n    \n    </div>\n  </div>\n</header>"
         }
-      },
-      "hidden": true,
-      "html": "<header class=\"govuk-header govuk-header--hmlr \" role=\"banner\" data-module=\"govuk-header\" data-test-attribute=\"value\" data-test-attribute-2=\"value-2\">\n  <div class=\"govuk-header__container govuk-width-container\">\n    <div class=\"govuk-header__content govuk-header__content--hmlr\">\n    \n      <span class=\"govuk-header__service-name\">\n        \n      </span>\n    \n    </div>\n  </div>\n</header>"
-    },
-    {
-      "name": "classes",
-      "options": {
-        "classes": "app-header--custom-modifier"
-      },
-      "hidden": true,
-      "html": "<header class=\"govuk-header govuk-header--hmlr app-header--custom-modifier\" role=\"banner\" data-module=\"govuk-header\">\n  <div class=\"govuk-header__container govuk-width-container\">\n    <div class=\"govuk-header__content govuk-header__content--hmlr\">\n    \n      <span class=\"govuk-header__service-name\">\n        \n      </span>\n    \n    </div>\n  </div>\n</header>"
-    }
-  ]
+    ]
 }

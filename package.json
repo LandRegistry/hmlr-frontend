@@ -68,7 +68,7 @@
     "glob": "^9.3.5",
     "jsdiff": "^1.1.1",
     "nunjucks": "^3.2.4",
-    "prettier": "^2.8.8",
+    "prettier": "^3.4.2",
     "sass-loader": "^13.3.3",
     "sass": "^1.82.0",
     "simple-nunjucks-loader": "^3.2.0",

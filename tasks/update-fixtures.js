@@ -13,17 +13,17 @@ async function updateComponentFixtures(component) {
     const componentFixtures = JSON.parse(
       await fs.readFile(
         `${componentsDirectory}${component}${componentFixturesFile}`,
-        "utf8"
-      )
+        "utf8",
+      ),
     );
     const componentNunjucks = await fs.readFile(
       `${componentsDirectory}${component}/template.njk`,
-      "utf8"
+      "utf8",
     );
 
     const componentNunjucksAliased = componentNunjucks.replace(
       '{% include "govuk/',
-      '{% include "node_modules/govuk-frontend/dist/govuk/'
+      '{% include "node_modules/govuk-frontend/dist/govuk/',
     );
 
     const updatedFixtures = componentFixtures.fixtures.map((fixture) => ({
@@ -40,7 +40,7 @@ async function updateComponentFixtures(component) {
 
     await fs.writeFile(
       `${componentsDirectory}${component}${componentFixturesFile}`,
-      JSON.stringify(newComponentFixtures, null, 4)
+      JSON.stringify(newComponentFixtures, null, 4),
     );
 
     return { component, success: true };
@@ -53,13 +53,13 @@ async function updateComponentFixtures(component) {
 async function main() {
   try {
     const optionsFiles = await glob(
-      `${componentsDirectory}*${componentFixturesFile}`
+      `${componentsDirectory}*${componentFixturesFile}`,
     ); // Use async glob
 
     const components = optionsFiles.map((optionsFile) =>
       optionsFile
         .replace(new RegExp(`^${componentsDirectory}`), "")
-        .replace(new RegExp(`${componentFixturesFile}$`), "")
+        .replace(new RegExp(`${componentFixturesFile}$`), ""),
     );
 
     const results = await Promise.all(components.map(updateComponentFixtures));
@@ -70,7 +70,7 @@ async function main() {
       console.error(
         `\n🔴 [FAIL] ${failedComponents.length} component${
           failedComponents.length === 1 ? "" : "s"
-        } failed to update:`
+        } failed to update:`,
       );
       failedComponents.forEach((result) => {
         console.error(`- ${result.component}: ${result.error.message}`);
