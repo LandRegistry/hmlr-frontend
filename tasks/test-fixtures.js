@@ -1,4 +1,4 @@
-const glob = require("glob"); // Make sure you have glob@9 installed: npm install glob@9
+const { glob } = require("glob"); // Use destructuring for v11+
 const fs = require("fs/promises");
 const nunjucks = require("nunjucks");
 
@@ -58,9 +58,11 @@ async function testComponentFixtures(component) {
 
 async function main() {
   try {
+    // Key change for glob v11: Use glob with await and options
     const optionsFiles = await glob(
       `${componentsDirectory}*${componentFixturesFile}`,
-    ); // Use async glob
+      { windowsPathsNoEscape: true }, // Add options as needed. windowsPathsNoEscape handles backslashes on Windows
+    );
 
     const components = optionsFiles.map((optionsFile) =>
       optionsFile

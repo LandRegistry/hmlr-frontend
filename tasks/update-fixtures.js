@@ -1,4 +1,4 @@
-const glob = require("glob");
+const { glob } = require("glob"); // Destructure glob import
 const fs = require("fs/promises"); // Use fs.promises for async file operations
 const nunjucks = require("nunjucks");
 
@@ -54,7 +54,8 @@ async function main() {
   try {
     const optionsFiles = await glob(
       `${componentsDirectory}*${componentFixturesFile}`,
-    ); // Use async glob
+      { windowsPathsNoEscape: true },
+    ); // Use await and options
 
     const components = optionsFiles.map((optionsFile) =>
       optionsFile
