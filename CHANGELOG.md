@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] - yyyy-mm-dd
 
+## [2.1.0-rc.1] - 2024-12-11
+
+### Changed
+
+- Updated node version from `lts/iron` to `lts/jod`
+- Updated `govuk-frontend` to `5.7.1`
+- Updated all other dependencies to latest major versions
+- Prettier formatted everything
+- Added `node_modules/govuk-frontend/dist` to Sass CLI load-path to simplify `@import` statements
+- Importing `index.scss` instead of `all.scss` as per guidance: <https://frontend.design-system.service.gov.uk/import-css/#import-using-sass>
+- Updated to latest GOV.UK Frontend macro options and test fixtures
+- Rewritten how `test-fixtures.js` and `update-fixtures.js` uses `glob` as part of upgrade from v8 to v11
+
 ## [2.0.0] - 2024-06-10
 
 No changes since `2.0.0-rc.1`

@@ -1,32 +1,32 @@
 [
-    {
-        "name": "serviceName",
-        "type": "string",
-        "required": true,
-        "description": "The name of your service, included in the header."
-    },
-    {
-        "name": "serviceUrl",
-        "type": "string",
-        "required": false,
-        "description": "URL for the service name anchor."
-    },
-    {
-        "name": "containerClasses",
-        "type": "string",
-        "required": false,
-        "description": "Classes for the container, useful if you want to make the header fixed width."
-    },
-    {
-        "name": "classes",
-        "type": "string",
-        "required": false,
-        "description": "Classes to add to the header container."
-    },
-    {
-        "name": "attributes",
-        "type": "object",
-        "required": false,
-        "description": "HTML attributes (for example data attributes) to add to the header container."
-    }
+  {
+    "name": "serviceName",
+    "type": "string",
+    "required": true,
+    "description": "The name of your service, included in the header."
+  },
+  {
+    "name": "serviceUrl",
+    "type": "string",
+    "required": false,
+    "description": "URL for the service name anchor."
+  },
+  {
+    "name": "containerClasses",
+    "type": "string",
+    "required": false,
+    "description": "Classes for the container, useful if you want to make the header fixed width."
+  },
+  {
+    "name": "classes",
+    "type": "string",
+    "required": false,
+    "description": "Classes to add to the header container."
+  },
+  {
+    "name": "attributes",
+    "type": "object",
+    "required": false,
+    "description": "HTML attributes (for example data attributes) to add to the header container."
+  }
 ]

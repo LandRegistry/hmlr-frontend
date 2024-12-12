@@ -3,17 +3,22 @@ const webpackConfig = require("../webpack.config");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx)"],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx)"],
+
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-docs",
     "@storybook/addon-a11y",
+    "@storybook/addon-webpack5-compiler-babel",
+    "@chromatic-com/storybook",
   ],
-  framework: "@storybook/html",
-  core: {
-    builder: "@storybook/builder-webpack5",
+
+  framework: {
+    name: "@storybook/html-webpack5",
+    options: {},
   },
+
   webpackFinal: async (config, { configType }) => {
     // config.resolve.alias = { ...webpackConfig.resolve.alias };
 
@@ -26,7 +31,7 @@ module.exports = {
           //   to: "./node_modules/govuk-frontend/govuk-esm",
           // },
         ],
-      })
+      }),
     );
 
     config.module.rules = [
@@ -65,4 +70,6 @@ module.exports = {
 
     return config;
   },
+
+  docs: {},
 };
