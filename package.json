@@ -70,7 +70,7 @@
     "nunjucks": "^3.2.4",
     "prettier": "^3.4.2",
     "sass-loader": "^16.0.4",
-    "sass": "^1.83.4",
+    "sass": "^1.84.0",
     "simple-nunjucks-loader": "^3.2.0",
     "storybook": "^8.5.3",
     "style-loader": "^4.0.0",
