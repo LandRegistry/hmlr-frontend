@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased] - yyyy-mm-dd
 
+## [2.1.0-rc.2] - 2025-02-10
+
+### Changed
+
+- Updated `govuk-frontend` to `5.8.0`
+- Updated all other dependencies to latest major versions
+
+### Removed
+
+- `node_modules/govuk-frontend/dist` from Sass load-path to resolve prototype kit import path error
+
 ## [2.1.0-rc.1] - 2024-12-11
 
 ### Changed
