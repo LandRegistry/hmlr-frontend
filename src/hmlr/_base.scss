@@ -4,4 +4,4 @@ $govuk-assets-path: "/govuk-frontend/dist/govuk/assets/" !default;
 @import "settings/all";
 @import "tools/all";
 
-@import "govuk/base";
+@import "node_modules/govuk-frontend/dist/govuk/base";
