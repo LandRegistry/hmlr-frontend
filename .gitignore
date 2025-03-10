@@ -1,7 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/git,node,linux,macos,storybookjs,visualstudiocode,windows,jetbrains+all
-# Edit at https://www.toptal.com/developers/gitignore?templates=git,node,linux,macos,storybookjs,visualstudiocode,windows,jetbrains+all
-
-package
+# Created by https://www.toptal.com/developers/gitignore/api/git,node,sass,windows,linux,macos,visualstudiocode,jetbrains+all
+# Edit at https://www.toptal.com/developers/gitignore?templates=git,node,sass,windows,linux,macos,visualstudiocode,jetbrains+all
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -294,11 +292,11 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
-### StorybookJs ###
-# gitignore template for the Storybook, UI guide for front apps
-# website: https://storybook.js.org/
-
-storybook/
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
 
 ### VisualStudioCode ###
 .vscode/*
@@ -345,4 +343,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/git,node,linux,macos,storybookjs,visualstudiocode,windows,jetbrains+all
+# End of https://www.toptal.com/developers/gitignore/api/git,node,sass,windows,linux,macos,visualstudiocode,jetbrains+all
