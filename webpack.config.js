@@ -1,13 +1,36 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
-  entry: "./src/hmlr/all.mjs",
-  mode: "development",
+  mode: "production",
+  devtool: "source-map",
+  entry: ["./src/all.mjs", "./src/index.scss"],
+  output: {
+    filename: "main.min.js",
+    path: path.resolve(__dirname, "dist"),
+    clean: true,
+  },
   module: {
     rules: [
       {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                quietDeps: true,
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
@@ -15,11 +38,24 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/images/[hash][ext][query]",
+        },
+      },
     ],
   },
-  output: {
-    filename: "all.js",
-    path: path.resolve(__dirname, "package/hmlr"),
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "main.min.css",
+    }),
+  ],
+  resolve: {
+    modules: [path.resolve(__dirname, "node_modules")],
   },
-  devtool: "source-map",
+  optimization: {
+    minimizer: [`...`, new CssMinimizerPlugin()],
+  },
 };
