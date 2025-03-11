@@ -1,6 +1,6 @@
 {
   "nunjucksPaths": ["/"],
-  "scripts": ["/hmlr/all.js"],
+  "scripts": ["/hmlr/all.mjs"],
   "assets": ["/hmlr/assets"],
   "sass": ["/hmlr/_prototype-kit.scss"]
 }
