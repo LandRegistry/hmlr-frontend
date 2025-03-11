@@ -7,7 +7,7 @@ module.exports = {
   devtool: "source-map",
   entry: ["./src/hmlr/all.mjs", "./src/hmlr/index.scss"],
   output: {
-    filename: "main.min.js",
+    filename: "hmlr-frontend.min.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
@@ -49,7 +49,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "main.min.css",
+      filename: "hmlr-frontend.min.css",
     }),
   ],
   resolve: {
