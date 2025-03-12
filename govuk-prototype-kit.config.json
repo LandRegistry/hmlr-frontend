@@ -2,5 +2,5 @@
   "nunjucksPaths": ["/"],
   "scripts": ["/hmlr/all.mjs"],
   "assets": ["/hmlr/assets"],
-  "sass": ["/hmlr/_prototype-kit.scss"]
+  "sass": ["/hmlr/index.scss"]
 }
