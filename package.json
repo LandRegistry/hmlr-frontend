@@ -35,7 +35,7 @@
     "govuk-frontend": "5.9.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.9",
+    "@babel/core": "^7.26.10",
     "@babel/preset-env": "^7.26.9",
     "babel-loader": "^10.0.0",
     "css-loader": "^7.1.2",
@@ -44,7 +44,7 @@
     "mini-css-extract-plugin": "^2.9.2",
     "nunjucks": "^3.2.4",
     "prettier": "^3.5.3",
-    "sass": "^1.85.1",
+    "sass": "^1.86.0",
     "sass-loader": "^16.0.5",
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1"
