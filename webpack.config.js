@@ -1,6 +1,8 @@
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require("path");
+const postcssPresetEnv = require("postcss-preset-env");
 
 module.exports = {
   mode: "production",
@@ -19,6 +21,14 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           "css-loader",
           {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [postcssPresetEnv],
+              },
+            },
+          },
+          {
             loader: "sass-loader",
             options: {
               sassOptions: {
@@ -34,7 +44,15 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"],
+            presets: [
+              [
+                "@babel/preset-env",
+                {
+                  bugfixes: true,
+                  loose: true,
+                },
+              ],
+            ],
           },
         },
       },
@@ -42,7 +60,7 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
         generator: {
-          filename: "assets/images/[hash][ext][query]",
+          filename: "assets/images/[name][ext][query]",
         },
       },
     ],
@@ -50,6 +68,14 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "hmlr-frontend.min.css",
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "src/hmlr/assets",
+          to: "assets",
+        },
+      ],
     }),
   ],
   resolve: {
