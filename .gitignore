@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/git,node,sass,windows,linux,macos,visualstudiocode,jetbrains+all
-# Edit at https://www.toptal.com/developers/gitignore?templates=git,node,sass,windows,linux,macos,visualstudiocode,jetbrains+all
+# Created by https://www.toptal.com/developers/gitignore/api/git,node,sass,linux,macos,windows,jetbrains+all,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=git,node,sass,linux,macos,windows,jetbrains+all,visualstudiocode
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -294,7 +294,7 @@ out
 
 ### Sass ###
 .sass-cache/
-*.css.map
+# *.css.map
 *.sass.map
 *.scss.map
 
@@ -343,4 +343,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/git,node,sass,windows,linux,macos,visualstudiocode,jetbrains+all
+# End of https://www.toptal.com/developers/gitignore/api/git,node,sass,linux,macos,windows,jetbrains+all,visualstudiocode
