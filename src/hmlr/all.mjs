@@ -1,3 +1,3 @@
-// import * as GOVUKFrontend from "../../node_modules/govuk-frontend/govuk-esm/all.mjs";
+// import { initAll } from "govuk-frontend";
 
-// window.GOVUKFrontend = GOVUKFrontend
+// initAll();

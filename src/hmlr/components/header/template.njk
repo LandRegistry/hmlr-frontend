@@ -1,16 +1,18 @@
-<header class="govuk-header govuk-header--hmlr {{ params.classes if params.classes }}" role="banner" data-module="govuk-header"
-        {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
-  <div class="govuk-header__container {{ params.containerClasses | default('govuk-width-container') }}">
+{% from "../../macros/attributes.njk" import govukAttributes %}
+
+<header class="govuk-header govuk-header--hmlr {%- if params.classes %} {{ params.classes }}{% endif %}" data-module="govuk-header"
+  {{- govukAttributes(params.attributes) }}>
+  <div class="govuk-header__container {{ params.containerClasses | default("govuk-width-container", true) }}">
     <div class="govuk-header__content govuk-header__content--hmlr">
-    {% if params.serviceUrl %}
+      {% if params.serviceUrl %}
       <a href="{{ params.serviceUrl }}" class="govuk-header__link govuk-header__service-name">
         {{ params.serviceName }}
       </a>
-    {% else %}
+      {% else %}
       <span class="govuk-header__service-name">
         {{ params.serviceName }}
       </span>
-    {% endif %}
+      {% endif %}
     </div>
   </div>
 </header>

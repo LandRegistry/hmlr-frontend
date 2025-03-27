@@ -1,15 +1,17 @@
 {
   "name": "@hmlr/frontend",
-  "version": "2.1.0-rc.2",
-  "description": "HM Land Registry frontend styles",
+  "version": "2.1.0-rc.3",
+  "description": "HM Land Registry Frontend",
+  "main": "src/hmlr/all.mjs",
   "scripts": {
-    "start": "storybook dev -p 6006",
-    "build": "storybook build -o storybook",
-    "build:sass": "sass --style=compressed --quiet-deps --load-path=. src/hmlr/all.scss package/hmlr/all.css",
-    "build:scripts": "webpack",
+    "prebuild": "npm run format:check && npm run lint:check",
+    "build": "webpack",
+    "format:check": "prettier src --check",
+    "format:fix": "prettier src --write",
+    "lint:check": "eslint src",
+    "lint:fix": "eslint src --fix",
     "test": "node tasks/test-fixtures.js || exit 1",
-    "lint": "prettier --check '{src,.storybook,tasks,bin}/**/*.{js,mjs,scss,mdx,html}'",
-    "prettier": "prettier --write '{src,.storybook,tasks,bin}/**/*.{js,mjs,scss,mdx,html}'"
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -31,50 +33,31 @@
   "bugs": {
     "url": "https://github.com/LandRegistry/hmlr-frontend/issues"
   },
-  "main": "hmlr/all.js",
-  "exports": {
-    ".": {
-      "sass": "./hmlr/all.scss",
-      "require": "./hmlr/all.js"
-    },
-    "./hmlr/": "./hmlr/"
-  },
-  "sass": "hmlr/all.scss",
-  "engines": {
-    "node": "22.x",
-    "npm": "10.x"
-  },
   "homepage": "https://github.com/LandRegistry/hmlr-frontend#readme",
   "dependencies": {
-    "govuk-frontend": "5.8.0"
+    "govuk-frontend": "5.9.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.8",
-    "@babel/preset-env": "^7.26.8",
-    "@babel/preset-react": "^7.26.3",
-    "@babel/preset-typescript": "^7.26.0",
-    "@chromatic-com/storybook": "^3.2.4",
-    "@mdx-js/react": "^3.1.0",
-    "@storybook/addon-a11y": "^8.5.3",
-    "@storybook/addon-docs": "^8.5.3",
-    "@storybook/addon-essentials": "^8.5.3",
-    "@storybook/addon-links": "^8.5.3",
-    "@storybook/addon-webpack5-compiler-babel": "^3.0.5",
-    "@storybook/html-webpack5": "^8.5.3",
-    "@storybook/html": "^8.5.3",
-    "babel-loader": "^9.2.1",
-    "copy-webpack-plugin": "^12.0.2",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@eslint/js": "^9.23.0",
+    "babel-loader": "^10.0.0",
+    "copy-webpack-plugin": "^13.0.0",
     "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "globals": "^16.0.0",
     "glob": "^11.0.1",
-    "jsdiff": "^1.1.1",
+    "mini-css-extract-plugin": "^2.9.2",
     "nunjucks": "^3.2.4",
-    "prettier": "^3.5.0",
-    "sass-loader": "^16.0.4",
-    "sass": "^1.84.0",
-    "simple-nunjucks-loader": "^3.2.0",
-    "storybook": "^8.5.3",
-    "style-loader": "^4.0.0",
-    "webpack-cli": "^6.0.1",
-    "webpack": "^5.97.1"
+    "npm-check-updates": "^17.1.16",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^10.1.5",
+    "prettier": "^3.5.3",
+    "sass": "^1.86.0",
+    "sass-loader": "^16.0.5",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
   }
 }
