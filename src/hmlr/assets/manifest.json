@@ -6,6 +6,12 @@
       "sizes": "48x48"
     },
     {
+      "src": "images/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "60x57",
+      "purpose": "any"
+    },
+    {
       "src": "images/hmlr-icon-152.png",
       "type": "image/png",
       "sizes": "152x152",
